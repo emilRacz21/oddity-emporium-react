@@ -1,17 +1,16 @@
-import { collection } from "../../content";
+import { collection, collecionOffer } from "../../content";
 import "./Collection.scss";
 export default function Collection() {
   return (
     <section className="collection-section">
       <article className="collection-article">
         <p className="collection-offer">special</p>
-        <h2>Our Curated Collection...</h2>
+        <h2>{collecionOffer.title}</h2>
         <p>
-          At <a>Oddity Emporium</a>, we specialize in one-of-a-kind, surreal
-          items that challenge the very fabric of reality. Whether you re a
-          collector of the strange, an adventurer in search of the unknown, or
-          simply curious about the unexplainable, our <a>store</a> offers a
-          variety of unique categories
+          {collecionOffer.desca}
+          <a>{collecionOffer.descb}</a>
+          {collecionOffer.descc}
+          <a>{collecionOffer.descd}</a> {collecionOffer.desce}
         </p>
       </article>
       <article className="collection-items">

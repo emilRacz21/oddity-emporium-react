@@ -4,6 +4,44 @@ import curiosities from "../src/assets/svg/curiosities.svg";
 import invisible from "../src/assets/svg/invisible.svg";
 import phantasmal from "../src/assets/svg/phantasmal.svg";
 import ghost from "../src/assets/svg/ghost.svg";
+import logo from "../src/assets/logo/logo.png";
+
+export const header = {
+  logo,
+  navBtn: ["Getting started", "Shop", "Contact", "About us", "Login"],
+};
+
+export const author = {
+  title: "Welcome to...",
+  titlea: "Oddity",
+  titleb: "Emporium",
+  titleDesc: "What kind of stuff we have?",
+  desca: `Here, you ll find a collection of`,
+  descb: ` peculiar artifacts`,
+  descc: `, mind-bending curiosities, and objects that defy 
+      reality itself. From bottled dreams and `,
+  descd: `gravity-defying stones`,
+  desce: ` to pocket-sized storms and invisible ink
+              that reveals secrets only at midnight—each item tells a story
+              stranger than fiction. Enter if you `,
+  descf: `dare to explore`,
+  descg: ` the unexplained, the surreal, and the
+              wondrously weird. Magic awaits those who believe!`,
+  buttona: "Go to shop",
+  buttonb: "About us",
+};
+
+export const collecionOffer = {
+  title: "Our Curated Collection...",
+  desca: `At`,
+  descb: `Oddity Emporium`,
+  descc: `, we specialize in one-of-a-kind, surreal
+          items that challenge the very fabric of reality. Whether you re a
+          collector of the strange, an adventurer in search of the unknown, or
+          simply curious about the unexplainable, our `,
+  descd: `store`,
+  desce: ` offers a variety of unique categories`,
+};
 
 export const collection = [
   {
@@ -62,6 +100,7 @@ import smile from "../src/assets/svg/smile.svg";
 import laugh from "../src/assets/svg/laugh.svg";
 import smug from "../src/assets/svg/smug.svg";
 import sad from "../src/assets/svg/sad-face.svg";
+
 export const oddity = [
   {
     img: smile,

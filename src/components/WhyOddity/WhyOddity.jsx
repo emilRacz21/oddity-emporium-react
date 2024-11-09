@@ -7,7 +7,6 @@ export default function WhyOddity() {
         <article className="oddity-adventages">
           <p className="oddity-extra">extra</p>
           <h2>Why Shop at Oddity Emporium?</h2>
-
           {oddity.map((items, index) => {
             const { img, alt, title, description } = items;
             return (
