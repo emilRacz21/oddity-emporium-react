@@ -1,0 +1,86 @@
+@use "../../index.scss" as *;
+.footer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-color;
+}
+.footer-container {
+  border-bottom: 2px solid rgb(200, 200, 200);
+  width: 80rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-grid-1 {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: 4rem 0;
+  h2 {
+    margin: 0;
+    color: $color-blue;
+  }
+  p {
+    cursor: pointer;
+    margin: 0.5rem 0;
+    line-height: 1rem;
+    transition: 0.3s ease;
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  .footer-btn {
+    @include button;
+    padding: 0.4rem 1rem;
+    background-color: $color-blue;
+    transition: 0.3s ease;
+    &:hover {
+      background-color: rgb(85, 85, 191);
+    }
+  }
+  .footer-btn-no-border {
+    @include button;
+    padding: 0.4rem 1rem;
+    background-color: transparent;
+    &:hover {
+      color: rgb(85, 85, 191);
+    }
+  }
+}
+
+.footer-grid-1-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    line-height: 1.7rem;
+    padding-left: 2rem;
+  }
+  img {
+    width: 6rem;
+    height: 6rem;
+    place-items: center;
+  }
+}
+.footer-author {
+  padding: 0.5rem 0;
+  background-color: $main-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0;
+  }
+}
+.footer-contact-media {
+  padding: 1rem 0;
+  img {
+    cursor: pointer;
+    padding-right: 1.5rem;
+    width: 2.5rem;
+  }
+}

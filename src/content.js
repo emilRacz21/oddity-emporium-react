@@ -134,3 +134,35 @@ export const oddity = [
         even mind-bending experiences. Add a little chaos, magic, or mystery to your everyday life.`,
   },
 ];
+
+import tiktok from "../src/assets/svg/tiktok.svg";
+import instagram from "../src/assets/svg/instagram.svg";
+import linkedIn from "../src/assets/svg/linkedIn.svg";
+
+export const footer = {
+  logo,
+  logoAlt: "Oddity Emporium logo",
+  titleAlt: "Oddity Emporium",
+  description: "Join us on our website!",
+  button: "Login",
+  buttona: "About us",
+  question: "Questions/answers",
+  questions: [
+    "Are your items safe to use?",
+    "Can I return an invisible item?",
+    "What if my purchase disappears?",
+    "Can I request a oddity?",
+    "What happens if my item starts whispering?",
+  ],
+  shopTitle: "Shop",
+  shop: ["browse category", "select price", "your shopping cart", "rest API"],
+  conc: "Contact",
+  contactdesc: "You can use form or just click below and go to social media",
+  images: [
+    { alt: "LinkedIn", img: linkedIn },
+    { alt: "Instagram", img: instagram },
+    { alt: "TikTok", img: tiktok },
+  ],
+  footerAuthor: "2024 Capyright: Oddity Emporium",
+  footerCreated: "Created by: ER Studio",
+};
