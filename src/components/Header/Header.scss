@@ -1,0 +1,35 @@
+@use "../../index.scss" as *;
+header {
+  background-color: $main-color;
+  display: flex;
+  justify-content: center;
+}
+.header-section {
+  display: flex;
+  width: 80rem;
+  justify-content: space-between;
+  img {
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+  }
+
+  ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    li {
+      display: flex;
+      margin: 0 2rem;
+      font-size: 1.4rem;
+      transition: 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-blue;
+      }
+    }
+  }
+}
