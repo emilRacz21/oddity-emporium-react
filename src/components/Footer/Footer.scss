@@ -1,4 +1,15 @@
 @use "../../index.scss" as *;
+@mixin links {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  margin: 0.5rem 0;
+  line-height: 1rem;
+  transition: 0.3s ease;
+  &:hover {
+    color: $color-blue;
+  }
+}
 .footer-section {
   display: flex;
   justify-content: center;
@@ -24,13 +35,7 @@
     color: $color-blue;
   }
   p {
-    cursor: pointer;
-    margin: 0.5rem 0;
-    line-height: 1rem;
-    transition: 0.3s ease;
-    &:hover {
-      color: $color-blue;
-    }
+    @include links;
   }
 
   .footer-btn {
@@ -88,4 +93,7 @@
       transform: scale(0.9);
     }
   }
+}
+.footer-conc {
+  @include links;
 }

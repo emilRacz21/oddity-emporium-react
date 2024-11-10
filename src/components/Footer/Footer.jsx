@@ -66,7 +66,9 @@ export default function Footer() {
 
           <div className="footer-grid-1">
             <h2>{footer.conc}</h2>
-            <p>{footer.contactdesc}</p>
+            <Link className="footer-conc" to={"/contact"}>
+              {footer.contactdesc}
+            </Link>
             <div className="footer-contact-media">
               {footer.images.map((items, index) => {
                 return <img key={index} src={items.img} alt={items.alt} />;
