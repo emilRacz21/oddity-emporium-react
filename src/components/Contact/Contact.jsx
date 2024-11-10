@@ -1,5 +1,5 @@
 import "./Contact.scss";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 export default function Contact() {
   return (
     <section>
