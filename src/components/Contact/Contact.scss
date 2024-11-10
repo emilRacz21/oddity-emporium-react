@@ -85,4 +85,7 @@
   padding: 0.6rem 1rem;
   margin-top: 1.4rem;
   background-color: $color-blue;
+  &:hover {
+    background-color: rgb(20, 53, 113);
+  }
 }
