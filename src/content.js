@@ -195,3 +195,34 @@ export const dialogContents = [
       it's simply imparting wisdom. If it becomes too chatty, feel free to let us know, and we'll help restore quiet.`,
   },
 ];
+
+import call from "../src/assets/svg/call.svg";
+import mail from "../src/assets/svg/mail.svg";
+import location from "../src/assets/svg/location.svg";
+import calendar from "../src/assets/svg/calendar.svg";
+export const contactOpen = {
+  img: calendar,
+  alt: `Icon of Calendar`,
+  titlea: `We are open monday - friday : `,
+  titleb: ` 8AM - 10PM `,
+};
+export const contact = [
+  {
+    img: call,
+    alt: "Icon of Call",
+    title: "call to us:",
+    desc: "+1 334 546 333",
+  },
+  {
+    img: mail,
+    alt: "Icon of Mail",
+    title: "Send an e-mail:",
+    desc: "oddity@office.com",
+  },
+  {
+    img: location,
+    alt: "Icon of Location",
+    title: "Location",
+    desc: "Decatur Blvd unit a, Las Vegas, US",
+  },
+];

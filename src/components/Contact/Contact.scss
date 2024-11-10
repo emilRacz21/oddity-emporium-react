@@ -1,1 +1,88 @@
 @use "../../index.scss" as *;
+@mixin form {
+  font-family: "Pixelify Sans", sans-serif;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: $main-color;
+}
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: $color-blue;
+}
+.contact-container {
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80rem;
+}
+.contact-grid {
+  p {
+    font-size: 1.4rem;
+    margin: 0.6rem 0;
+  }
+}
+.contact-information {
+  display: flex;
+  align-items: center;
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+  p {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+  a {
+    font-weight: 800;
+    color: red;
+  }
+}
+.contact-social-row {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+  p {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+  h2 {
+    a {
+      color: rgb(200, 47, 47);
+    }
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    @include form;
+    height: 2rem;
+    margin-bottom: 1rem;
+  }
+  textarea {
+    @include form;
+    padding: 1rem;
+    height: 4rem;
+  }
+}
+.contact-btn {
+  @include button;
+  padding: 0.6rem 1rem;
+  margin-top: 1.4rem;
+  background-color: $color-blue;
+}
