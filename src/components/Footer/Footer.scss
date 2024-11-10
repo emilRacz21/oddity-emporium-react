@@ -8,6 +8,7 @@
 .footer-container {
   border-bottom: 2px solid rgb(200, 200, 200);
   width: 80rem;
+  margin: 0 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -82,5 +83,9 @@
     cursor: pointer;
     padding-right: 1.5rem;
     width: 2.5rem;
+    transition: 0.3s ease;
+    &:hover {
+      transform: scale(0.9);
+    }
   }
 }

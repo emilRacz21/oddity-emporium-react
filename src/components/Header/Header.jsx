@@ -1,18 +1,39 @@
 import "./Header.scss";
 import { header } from "../../content";
-const { logo, navBtn } = header;
+import { Link, useNavigate } from "react-router-dom";
+const { logo } = header;
+
 export default function Header() {
+  let navigate = useNavigate();
   return (
     <header>
       <section className="header-section">
-        <img src={logo} alt="logo" />
-        {navBtn.map((items, index) => {
-          return (
-            <ul key={index}>
-              <li>{items}</li>
-            </ul>
-          );
-        })}
+        <img
+          src={logo}
+          alt="logo"
+          onClick={() => {
+            navigate("/");
+          }}
+        />
+        <div className="header-nav">
+          <nav>
+            <Link className="header-link" to="/">
+              Getting started
+            </Link>
+            <Link className="header-link" to="/shop">
+              Shop
+            </Link>
+            <Link className="header-link" to="/contact">
+              Contact
+            </Link>
+            <Link className="header-link" to="/about">
+              About us
+            </Link>
+            <Link className="header-link" to="/login">
+              Login
+            </Link>
+          </nav>
+        </div>
       </section>
     </header>
   );

@@ -1,5 +1,6 @@
 import "./Author.scss";
 import { author } from "../../content";
+import { Link } from "react-router-dom";
 export default function Author() {
   return (
     <>
@@ -22,9 +23,13 @@ export default function Author() {
               <a>{author.descf}</a>
               {author.descg}
             </p>
-            <div>
-              <button className="author-button-shop">{author.buttona}</button>
-              <button className="author-button-about">{author.buttonb}</button>
+            <div className="author-btns">
+              <Link className="author-button-shop" to="/shop">
+                {author.buttona}
+              </Link>
+              <Link className="author-button-about" to="/about">
+                {author.buttonb}
+              </Link>
             </div>
           </div>
         </article>

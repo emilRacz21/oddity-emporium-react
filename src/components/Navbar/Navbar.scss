@@ -1,0 +1,45 @@
+@use "../../index.scss" as *;
+@mixin navbar-color {
+  margin: 0;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.about-nav {
+  display: flex;
+  margin: 0;
+
+  p {
+    margin: 0 1rem;
+  }
+  .navbar-cl {
+    @include navbar-color;
+    color: white;
+    &:hover {
+      color: $color-blue;
+    }
+  }
+  .navbar-c2 {
+    @include navbar-color;
+    color: $color-blue;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+.about-section {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 80rem;
+  h2 {
+    margin: 0;
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+}

@@ -10,7 +10,10 @@
   padding-bottom: 2rem;
   width: 100%;
   border-top: $main-border;
+  animation: slowGif 200s linear infinite;
   background-color: rgba(0, 0, 0, 0.735);
+  background-image: url("../../assets/logo/2iiB.gif");
+  background-size: contain;
 }
 
 .collection-article {

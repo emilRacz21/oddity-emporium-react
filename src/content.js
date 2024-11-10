@@ -166,3 +166,32 @@ export const footer = {
   footerAuthor: "2024 Capyright: Oddity Emporium",
   footerCreated: "Created by: ER Studio",
 };
+export const dialogContents = [
+  {
+    title: `Are your items safe to use?`,
+    description: `Absolutely. While some of our items may seem unusual, 
+      they are carefully crafted with the highest standards 
+      of safety in mind. Just remember: always handle with curiosity.`,
+  },
+  {
+    title: `Can I return an invisible item?`,
+    description: `Invisible items are tricky, but we'll work with you. If you feel like 
+      it's not meeting your expectations, contact us and we'll find a way to 
+      make things right—just be sure to describe it as best you can.`,
+  },
+  {
+    title: `What if my purchase disappears?`,
+    description: `If an item mysteriously vanishes, don't panic. It's likely just exploring other dimensions. 
+      Reach out to us, and we'll help guide it back to your world.`,
+  },
+  {
+    title: `Can I request a custom oddity?`,
+    description: `Yes! We offer bespoke oddities for the truly adventurous. Send us your wildest ideas, 
+      and we'll craft something uniquely suited to your needs—or perhaps your unspoken desires.`,
+  },
+  {
+    title: `What happens if my item whispering?`,
+    description: `If your item starts whispering, you're in for an adventure. Listen closely—sometimes 
+      it's simply imparting wisdom. If it becomes too chatty, feel free to let us know, and we'll help restore quiet.`,
+  },
+];

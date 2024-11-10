@@ -1,9 +1,31 @@
 import "./Footer.scss";
 import { footer } from "../../content";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import ShowModal from "../ShowModal/ShowModal";
+import { dialogContents } from "../../content";
 export default function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [dialogContent, setDialogContent] = useState({
+    title: "",
+    description: "",
+  });
+  function handleselectedQuestion(index) {
+    setDialogContent(dialogContents[index]);
+    document.getElementById("root").style.filter = "blur(26px)";
+    setIsModalOpen(true);
+  }
   return (
     <>
       <section className="footer-section">
+        <ShowModal
+          dialogContent={dialogContent}
+          isOpen={isModalOpen}
+          onClose={() => {
+            setIsModalOpen(false);
+            document.getElementById("root").style.filter = "blur(0px)";
+          }}
+        />
         <div className="footer-container">
           <div className="footer-grid-1">
             <div className="footer-grid-1-row">
@@ -12,14 +34,27 @@ export default function Footer() {
             </div>
             <p style={{ margin: "1rem 0" }}>{footer.description}</p>
             <div className="footer-btn-grid">
-              <button className="footer-btn">{footer.button}</button>
-              <button className="footer-btn-no-border">{footer.buttona}</button>
+              <Link className="footer-btn" to={"/login"}>
+                {footer.button}
+              </Link>
+              <Link className="footer-btn-no-border" to={"/about"}>
+                {footer.buttona}
+              </Link>
             </div>
           </div>
           <div className="footer-grid-1">
             <h2>{footer.question}</h2>
             {footer.questions.map((items, index) => {
-              return <p key={index}>{items}</p>;
+              return (
+                <p
+                  key={index}
+                  onClick={() => {
+                    handleselectedQuestion(index);
+                  }}
+                >
+                  {items}
+                </p>
+              );
             })}
           </div>
           <div className="footer-grid-1">

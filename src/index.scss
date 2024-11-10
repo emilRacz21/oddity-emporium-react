@@ -4,6 +4,8 @@ $color-blue: rgb(37, 99, 215);
 $color-gold: rgb(231, 238, 19);
 @mixin button {
   cursor: pointer;
+  text-decoration: none;
+  color: white;
   font-size: 1.1rem;
   font-family: "Pixelify Sans", sans-serif;
   border-radius: 0.5rem;
@@ -14,12 +16,8 @@ $color-gold: rgb(231, 238, 19);
 :root {
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url("../src/assets/logo/2iiB.gif");
-  animation: slowGif 200s linear infinite;
-
   background-color: #18181f;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
