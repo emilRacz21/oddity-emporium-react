@@ -1,5 +1,5 @@
 import "./Login.scss";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 export default function Login() {
   return (
     <section>

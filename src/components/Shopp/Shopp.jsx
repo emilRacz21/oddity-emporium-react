@@ -1,5 +1,5 @@
 import "./Shopp.scss";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 export default function Shopp() {
   return (
     <section>
