@@ -20,7 +20,17 @@ $color-gold: rgb(231, 238, 19);
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(-3%);
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes fade-inn {
+  0% {
+    opacity: 0;
+    transform: translateY(-1%);
   }
   100% {
     opacity: 1;

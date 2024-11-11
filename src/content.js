@@ -227,3 +227,98 @@ export const contact = [
     desc: "Decatur Blvd unit a, Las Vegas, US",
   },
 ];
+export const aboutCite = [
+  {
+    author: `Elon Musk`,
+    content: `"Finally, a store that understands my vibe! I bought a Chrono-Item, 
+      and now I can take coffee breaks in the past. Highly recommend for anyone who 
+      needs more hours in the day—or just wants to play with the space-time continuum!"`,
+  },
+  {
+    author: `Jeff Bezos`,
+    content: `"As someone who's been to space, I thought I'd seen it all. Then I visited 
+        Oddity Emporium. I left with a pocket dimension for my office. Perfect for when 
+        I need to take a 'quick' five-hour power nap."`,
+  },
+  {
+    author: `Mark Zuckerberg`,
+    content: `"Oddity Emporium has objects so mysterious, even my algorithms can't 
+        understand them. Bought an Invisible Oddity—now I have a friend only 
+        I can see. Highly recommend for introverts."`,
+  },
+  {
+    author: `Bill Gates`,
+    content: `"I walked in looking for a gadget, walked out with a Living Curiosity. 
+        Turns out, I now have a pet rock that hums Bach in the evenings. 
+        Best purchase since Windows 95."`,
+  },
+  {
+    author: `Warren Buffett`,
+    content: `"I came in looking for a good investment and left with a clock that runs 
+        backwards. Now I can review my stock trades in reverse—if 
+        only it worked on the stock market!"`,
+  },
+  {
+    author: `Richard Branson`,
+    content: `"Oddity Emporium has some fascinating pieces! Got myself a 
+        Phantasmal Decor item that re-arranges itself. Now, every room 
+        I walk into is like a new adventure. Saves me on redecorating!"`,
+  },
+  {
+    author: `Larry Ellison`,
+    content: `"I have houses around the world, but Oddity Emporium helped me 
+        get my first interdimensional property—an invisible mansion that only 
+        appears when it rains. It's exclusive enough even for me!"`,
+  },
+  {
+    author: `Oprah Winfrey`,
+    content: `"Oddity Emporium is a hoot! I got everyone on my staff an 
+        Abstract Artifact. Now I have an office full of items that bend 
+        and twist—I mean, it's just like running a talk show!"`,
+  },
+  {
+    author: `Bernard Arnault`,
+    content: `"As someone in the luxury business, I can say Oddity Emporium 
+        redefines 'one of a kind.' Their Ethereal Relics line is a must-have,
+        even if they only appear under the light of a waxing moon!"`,
+  },
+  {
+    author: `Larry Page`,
+    content: `"Oddity Emporium is the only store where I don't feel compelled 
+        to understand everything. Bought a 'Mood Cloud' that rains when 
+        I'm frustrated with a project—Google could learn a thing or two from these guys."`,
+  },
+];
+import shop from "../src/assets/logo/shop.png";
+export const aboutContent = {
+  img: shop,
+  alt: `Logo of Oddity Emporium`,
+  title: `Welcome to oddity community!`,
+  content: ` a place where the lines between reality and imagination blur. We're
+          not your average shop; we’re a gateway to the unusual, the mystical,
+          and the wonderfully strange. Born from a love for all things
+          extraordinary, Oddity Emporium curates an ever-evolving collection of
+          items that defy explanation and spark curiosity.`,
+};
+export const aboutSections = [
+  {
+    title: `Our Story`,
+    content: `Oddity Emporium was born from a love for the extraordinary. We set out to create a place that brings together artifacts from worlds just beyond reach—items that invite curiosity and defy explanation. Our mission is to provide you with a collection of curiosities and treasures that inspire wonder and spark imagination.`,
+    className: `about-reverse`,
+  },
+  {
+    title: `Our Mission`,
+    content: `Our mission is simple: to share artifacts and oddities that make you question the nature of reality. From time-bending devices to living curiosities, each item we offer is handpicked for its unique ability to ignite curiosity and challenge perception.`,
+    className: `about-correct`,
+  },
+  {
+    title: `Meet Our Team of Oddity `,
+    content: `The team at Oddity Emporium is a group of explorers, collectors, and dreamers. Our "Oddity Seekers" travel hidden realms and forgotten spaces to bring you items that push the boundaries of the imaginable. Every piece is selected for its history, mystery, and the story it holds.`,
+    className: `about-reverse-2`,
+  },
+  {
+    title: `For the Curious and the Brave`,
+    content: `Oddity Emporium isn’t just a shop; it’s an invitation. For the curious, the brave, and the dreamers, we offer a chance to rediscover wonder. We’re here to remind you that even in a world filled with answers, there are still mysteries worth uncovering.`,
+    className: `about-correct-2`,
+  },
+];

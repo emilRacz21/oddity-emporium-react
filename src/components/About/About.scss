@@ -1,1 +1,121 @@
 @use "../../index.scss" as *;
+@mixin grids {
+  background-color: $main-color;
+  box-shadow: -10px -10px 1px rgb(6, 36, 53) inset;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 2rem;
+}
+.container {
+  animation: fade-inn 1s;
+  width: 80rem;
+  flex-direction: column;
+  img {
+    width: 30rem;
+    place-self: center;
+    margin: 2rem;
+  }
+  .container-h2 {
+    color: $color-blue;
+    font-size: $font-second;
+    margin: 0;
+  }
+  .container-p {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5rem;
+  margin-bottom: 2rem;
+}
+
+.about-item {
+  .about-h2 {
+    color: $color-blue;
+    margin: 0;
+    text-align: start;
+  }
+
+  .about-p {
+    margin: 0;
+    text-align: justify;
+    font-size: $font-p;
+  }
+}
+
+.about-reverse {
+  animation: scale 4s infinite;
+  @include grids;
+  grid-row: 1/2;
+  grid-column: 2/2;
+}
+
+.about-correct {
+  animation: scale 4s infinite;
+  @include grids;
+  grid-column: 3 /2;
+  grid-row: 3/3;
+}
+
+.about-reverse-2 {
+  animation: scale 4s infinite;
+  @include grids;
+  grid-column: 1/2;
+  grid-row: 4/4;
+}
+
+.about-correct-2 {
+  animation: scale 4s infinite;
+  @include grids;
+  grid-column: 1 /2;
+  grid-row: 2 / 2;
+}
+
+.about-slider {
+  padding-top: 2rem;
+  margin: auto;
+  width: 50rem;
+  height: max-content;
+
+  .slick-dots li.slick-active button:before {
+    color: white;
+  }
+
+  .slick-dots li button:before {
+    color: white;
+  }
+}
+
+.about-center-h2 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.about-q {
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+.about-cite {
+  font-size: 6rem;
+  margin: 0;
+  line-height: 3.5rem;
+  text-align: center;
+}
+
+.about-grid::before {
+  content: "";
+  position: absolute;
+  top: auto;
+  left: 50%;
+  height: 87rem;
+  border-left: 1px solid #ffffff;
+}
