@@ -9,6 +9,7 @@
   place-items: center;
   background-color: $main-color;
   img {
+    animation: scale 3s infinite;
     margin: 2rem;
     box-shadow: -10px -10px 1px rgb(1, 12, 18) inset;
     border-radius: 50%;
