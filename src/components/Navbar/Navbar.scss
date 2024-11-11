@@ -4,6 +4,12 @@
   text-decoration: none;
   transition: 0.3s ease;
 }
+.main-section {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .about-nav {
   display: flex;
   margin: 0;
@@ -28,9 +34,12 @@
   }
 }
 .about-section {
+  padding-top: 6rem;
+  border-bottom: 4px solid;
   margin: 4rem 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .about-container {
   display: flex;
@@ -39,7 +48,10 @@
   width: 80rem;
   h2 {
     margin: 0;
-    font-size: 5rem;
+    font-size: $font-main;
     line-height: 6rem;
   }
+}
+.navbar-child {
+  width: 80rem;
 }

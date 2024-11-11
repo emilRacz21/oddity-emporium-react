@@ -8,29 +8,32 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Shopp from "./components/Shopp/Shopp";
 import Login from "./components/Login/Login";
+import { ThemeProvider } from "./ThemeProvider";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Author />
-              <Collection />
-              <WhyOddity />
-            </>
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/shop" element={<Shopp />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Author />
+                <Collection />
+                <WhyOddity />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/shop" element={<Shopp />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -1,6 +1,10 @@
 $main-color: rgba(40, 50, 61, 0.869);
 $main-border: 4px solid rgb(41, 41, 41);
 $color-blue: rgb(37, 99, 215);
+$font-second: 2rem;
+$font-third: 3.5rem;
+$font-main: 5rem;
+$font-p: 1.1rem;
 $color-gold: rgb(231, 238, 19);
 @mixin button {
   cursor: pointer;
@@ -11,6 +15,14 @@ $color-gold: rgb(231, 238, 19);
   border-radius: 0.5rem;
   border: none;
   transition: 0.3s ease;
+}
+
+.container {
+  display: flex;
+  width: 80rem;
+  h2 {
+    font-size: $font-second;
+  }
 }
 
 :root {

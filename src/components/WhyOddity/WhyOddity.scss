@@ -16,6 +16,14 @@
   border-radius: 1rem;
   box-shadow: -10px -10px 1px rgb(6, 36, 53) inset;
 }
+.oddity-why {
+  font-size: $font-third;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 5s steps(22) infinite, blink 1s step-end infinite;
+  border-right: 1px solid;
+  margin: 0;
+}
 .oddity-adventages {
   margin: 4rem 0;
   display: flex;
@@ -24,9 +32,6 @@
   flex-direction: column;
   font-size: 2rem;
   text-align: center;
-  h2 {
-    margin: 0;
-  }
 }
 .oddity-logo-background {
   margin: 2rem;
@@ -55,9 +60,8 @@
   padding: 0.2rem 1rem;
   border-radius: 2rem;
   margin: 0;
-
   background-color: $color-gold;
-  font-size: 1.3rem;
+  font-size: $font-p;
   color: black;
 }
 .oddity-description {

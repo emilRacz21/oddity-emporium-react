@@ -16,6 +16,20 @@
   background-size: contain;
 }
 
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 67%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .collection-article {
   display: flex;
   justify-content: center;
@@ -24,6 +38,7 @@
   flex-direction: column;
 
   h2 {
+    font-size: $font-main;
     line-height: 6rem;
     margin: 0rem;
     font-size: 5rem;
@@ -40,6 +55,7 @@
     padding: 0.2rem 1rem;
     border-radius: 2rem;
     margin: 0;
+    font-size: $font-p;
     background-color: green;
   }
 }
@@ -79,6 +95,7 @@
   background-color: $main-color;
 
   p {
+    font-size: $font-p;
     text-align: justify;
   }
 }

@@ -6,7 +6,7 @@ export default function WhyOddity() {
       <div className="oddity-container">
         <article className="oddity-adventages">
           <p className="oddity-extra">extra</p>
-          <h2>Why Shop at Oddity Emporium?</h2>
+          <h2 className="oddity-why">Why Shop at Oddity Emporium?</h2>
           {oddity.map((items, index) => {
             const { img, alt, title, description } = items;
             return (

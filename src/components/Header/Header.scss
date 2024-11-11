@@ -2,6 +2,9 @@
 header {
   background-color: $main-color;
   display: flex;
+  position: fixed;
+  top: 0rem;
+  width: 100vw;
   justify-content: center;
 }
 .header-nav {
@@ -34,6 +37,10 @@ header {
 
       &:hover {
         color: $color-blue;
+      }
+      &.active {
+        color: rgb(37, 99, 215);
+        transform: scale(0.9);
       }
     }
   }

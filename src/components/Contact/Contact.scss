@@ -15,11 +15,10 @@
 .contact-p {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: $font-second;
   color: $color-blue;
 }
 .contact-container {
-  margin-bottom: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 80rem;

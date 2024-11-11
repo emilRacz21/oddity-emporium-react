@@ -1,6 +1,7 @@
 @use "../../index.scss" as *;
 
 .author-section {
+  padding-top: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,14 +49,14 @@
       flex-direction: column;
       justify-content: center;
       h2 {
-        margin-bottom: 0;
-        font-size: 1.8rem;
+        margin: 0;
+        font-size: $font-second;
       }
       p {
         text-align: justify;
         margin-top: 0;
         margin-right: 2rem;
-        font-size: 1rem;
+        font-size: $font-p;
         a {
           color: $color-blue;
         }

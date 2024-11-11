@@ -1,7 +1,10 @@
 import "./Author.scss";
 import { author } from "../../content";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../../ThemeProvider";
+import { useContext } from "react";
 export default function Author() {
+  const { setActiveIndex } = useContext(ThemeContext);
   return (
     <>
       <section className="author-section">
@@ -24,10 +27,18 @@ export default function Author() {
               {author.descg}
             </p>
             <div className="author-btns">
-              <Link className="author-button-shop" to="/shop">
+              <Link
+                className="author-button-shop"
+                to="/shop"
+                onClick={() => setActiveIndex(1)}
+              >
                 {author.buttona}
               </Link>
-              <Link className="author-button-about" to="/about">
+              <Link
+                className="author-button-about"
+                to="/about"
+                onClick={() => setActiveIndex(3)}
+              >
                 {author.buttonb}
               </Link>
             </div>

@@ -3,8 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { contact, contactOpen } from "../../content";
 export default function Contact() {
   return (
-    <section className="contact-section">
-      <Navbar title={["Getting started", "Contact", "", "contact"]} />
+    <Navbar title={["Getting started", "Contact", "", "contact"]}>
       <article className="contact-container">
         <div className="contact-grid">
           <h2 className="contact-p">Personal Information:</h2>
@@ -45,6 +44,6 @@ export default function Contact() {
           <button className="contact-btn">send now</button>
         </section>
       </article>
-    </section>
+    </Navbar>
   );
 }
