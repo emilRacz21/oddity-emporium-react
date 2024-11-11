@@ -14,8 +14,8 @@ export default function Login() {
           <form>
             <label>Your username</label>
             <input type="text" />
-            <label>Your username</label>
-            <input type="text" />
+            <label>Your password</label>
+            <input type="password" />
           </form>
 
           <section className="shop-button">
