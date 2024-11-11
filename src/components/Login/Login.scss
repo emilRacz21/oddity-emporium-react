@@ -9,7 +9,8 @@
   place-items: center;
   background-color: $main-color;
   img {
-    animation: rotate 4s infinite;
+    animation: rotate 2s;
+    transform: scale(0.8) rotateY(180deg) rotateZ(90deg);
     width: 12rem;
     height: 12rem;
   }
