@@ -1,11 +1,14 @@
 @use "../../index.scss" as *;
 header {
+  z-index: 11;
   background-color: $main-color;
   display: flex;
   position: fixed;
   top: 0rem;
   width: 100vw;
   justify-content: center;
+  backdrop-filter: blur(0.8rem);
+  box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.211);
 }
 .header-nav {
   display: flex;

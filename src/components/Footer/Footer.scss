@@ -10,7 +10,9 @@
     color: $color-blue;
   }
 }
+
 .footer-section {
+  box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.338);
   display: flex;
   justify-content: center;
   align-items: center;
