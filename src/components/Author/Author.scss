@@ -1,20 +1,35 @@
 @use "../../index.scss" as *;
 
 .author-section {
-  animation: fade-in 1s;
   padding-top: 6rem;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 56rem;
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
 
   .author-article {
+    animation: fade-in 1s;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 1rem;
     width: 70rem;
     height: 30rem;
     background-color: $main-color;
+    backdrop-filter: blur(0.4rem);
 
     .author-title {
       display: flex;

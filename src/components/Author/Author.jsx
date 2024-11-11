@@ -3,11 +3,16 @@ import { author } from "../../content";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../../ThemeProvider";
 import { useContext } from "react";
+import pixel from "../../assets/logo/pixel-city.mp4";
 export default function Author() {
   const { setActiveIndex } = useContext(ThemeContext);
   return (
     <>
       <section className="author-section">
+        <video autoPlay loop muted playsInline>
+          <source src={pixel} type="video/mp4" />
+        </video>
+
         <article className="author-article">
           <div className="author-title">
             <p>{author.title}</p>
