@@ -1,1 +1,61 @@
 @use "../../index.scss" as *;
+.shop-container {
+  width: 80rem;
+  box-shadow: -10px -10px 1px rgb(6, 36, 53) inset;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  background-color: $main-color;
+  img {
+    margin: 2rem;
+    box-shadow: -10px -10px 1px rgb(1, 12, 18) inset;
+    border-radius: 50%;
+    padding: 3rem;
+    background-color: $background;
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+.shop-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: white;
+    margin: 0;
+  }
+  button {
+    background-color: $color-blue;
+    padding: 0.7rem 2rem;
+    margin-left: 2rem;
+    @include button;
+    &:hover {
+      background-color: rgb(20, 53, 113);
+    }
+  }
+}
+
+.shop-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: $font-second;
+    margin: 0 0 1rem 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    input {
+      @include form;
+      background-color: $background;
+      margin-bottom: 1rem;
+      height: 3rem;
+      width: 27rem;
+    }
+  }
+}

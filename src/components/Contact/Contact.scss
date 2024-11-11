@@ -1,11 +1,5 @@
 @use "../../index.scss" as *;
-@mixin form {
-  font-family: "Pixelify Sans", sans-serif;
-  padding: 0 1rem;
-  border-radius: 0.5rem;
-  border: none;
-  background-color: $main-color;
-}
+
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -75,6 +69,7 @@
   }
   textarea {
     @include form;
+    resize: vertical;
     padding: 1rem;
     height: 4rem;
   }
