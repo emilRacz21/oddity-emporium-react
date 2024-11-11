@@ -9,17 +9,18 @@
   place-items: center;
   background-color: $main-color;
   img {
-    animation: scale 3s infinite;
-    margin: 2rem;
-    box-shadow: -10px -10px 1px rgb(1, 12, 18) inset;
-    border-radius: 50%;
-    padding: 3rem;
-    background-color: $background;
+    animation: rotate 4s infinite;
     width: 12rem;
     height: 12rem;
   }
 }
-
+.login-img {
+  margin: 2rem;
+  box-shadow: -10px -10px 1px rgb(1, 12, 18) inset;
+  border-radius: 50%;
+  padding: 3rem;
+  background-color: $background;
+}
 .shop-button {
   display: flex;
   justify-content: center;

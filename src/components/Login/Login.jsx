@@ -5,7 +5,10 @@ export default function Login() {
   return (
     <Navbar title={["Getting started", "Login", "", "login"]}>
       <section className="shop-container">
-        <img src={key} alt="Website logo" />
+        <div className="login-img">
+          <img src={key} alt="Website logo" />
+        </div>
+
         <section className="shop-section">
           <h2>Please log in to your account!</h2>
           <form>
