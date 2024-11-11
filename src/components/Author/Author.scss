@@ -1,6 +1,7 @@
 @use "../../index.scss" as *;
 
 .author-section {
+  animation: fade-in 1s;
   padding-top: 6rem;
   display: flex;
   justify-content: center;

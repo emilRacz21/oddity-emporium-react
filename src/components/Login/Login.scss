@@ -1,5 +1,6 @@
 @use "../../index.scss" as *;
 .shop-container {
+  animation: fade-in 1s;
   width: 80rem;
   box-shadow: -10px -10px 1px rgb(6, 36, 53) inset;
   border-radius: 1rem;

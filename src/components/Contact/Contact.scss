@@ -13,6 +13,7 @@
   color: $color-blue;
 }
 .contact-container {
+  animation: fade-in 1s;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 80rem;
