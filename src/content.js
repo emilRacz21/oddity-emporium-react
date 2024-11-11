@@ -5,7 +5,7 @@ import invisible from "../src/assets/svg/invisible.svg";
 import phantasmal from "../src/assets/svg/phantasmal.svg";
 import ghost from "../src/assets/svg/ghost.svg";
 import logo from "../src/assets/logo/logo.png";
-
+import pixel from "../src/assets/logo/pixel-city.mp4";
 export const header = {
   logo,
   navBtn: ["Getting started", "Shop", "Contact", "About us", "Login"],
@@ -29,6 +29,7 @@ export const author = {
               wondrously weird. Magic awaits those who believe!`,
   buttona: "Go to shop",
   buttonb: "About us",
+  pixel,
 };
 
 export const collecionOffer = {
