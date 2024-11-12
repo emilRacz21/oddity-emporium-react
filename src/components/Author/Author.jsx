@@ -1,7 +1,7 @@
 import "./Author.scss";
 import { author } from "../../content";
 import { Link } from "react-router-dom";
-import { ThemeContext } from "../../ThemeProvider";
+import { ThemeContext } from "../../store/theme-context";
 import { useContext } from "react";
 export default function Author() {
   const { setActiveIndex } = useContext(ThemeContext);

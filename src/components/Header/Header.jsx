@@ -2,7 +2,7 @@ import "./Header.scss";
 import { header } from "../../content";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState, useRef } from "react";
-import { ThemeContext } from "../../ThemeProvider";
+import { ThemeContext } from "../../store/theme-context";
 export default function Header() {
   let navigate = useNavigate();
   const intervalRef = useRef(null);

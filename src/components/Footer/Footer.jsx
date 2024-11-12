@@ -1,11 +1,10 @@
 import "./Footer.scss";
 import { footer } from "../../content";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ShowModal from "../ShowModal/ShowModal";
 import { dialogContents } from "../../content";
-import { useContext } from "react";
-import { ThemeContext } from "../../ThemeProvider";
+import { ThemeContext } from "../../store/theme-context";
 export default function Footer() {
   const { setActiveIndex } = useContext(ThemeContext);
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -1,7 +1,7 @@
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { ThemeContext } from "../../ThemeProvider";
+import { ThemeContext } from "../../store/theme-context";
 export default function Navbar({ title, children }) {
   const { setActiveIndex } = useContext(ThemeContext);
   let [name = "Getting started", secondName, navFirst = "", navSecond] = title;
