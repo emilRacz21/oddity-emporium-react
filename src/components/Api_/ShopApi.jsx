@@ -1,14 +1,13 @@
 import axios from "axios";
 import { useEffect } from "react";
 export default function ShopApi() {
-  const url = "https://atlantic-noisy-xylophone.glitch.me/inventions";
-
+  const url = import.meta.env.VITE_SHOP_API;
   useEffect(() => {
     axios
       .get(url)
       .then((response) => console.log(response.data))
       .catch((error) => console.log(error));
-  }, []);
+  }, [url]);
 
   function handleDeleteInvention() {
     axios.delete(`${url}/672e072e51729832868be5a2`);
