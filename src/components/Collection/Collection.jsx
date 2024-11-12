@@ -19,7 +19,7 @@ export default function Collection() {
             <div key={index} className="collection-grid">
               <div className="collection-items-in-row">
                 <img src={items.img} alt={items.alt} />
-                <h2>{items.title}</h2>
+                <h3>{items.title}</h3>
               </div>
               <p>{items.description}</p>
             </div>

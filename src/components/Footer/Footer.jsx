@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="footer-grid-1">
             <div className="footer-grid-1-row">
               <img src={footer.logo} alt={footer.logoAlt} />
-              <h2>{footer.titleAlt}</h2>
+              <h4>{footer.titleAlt}</h4>
             </div>
             <p style={{ margin: "1rem 0" }}>{footer.description}</p>
             <div className="footer-btn-grid">
@@ -54,7 +54,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-grid-1">
-            <h2>{footer.question}</h2>
+            <h4>{footer.question}</h4>
             {footer.questions.map((items, index) => {
               return (
                 <p
@@ -69,14 +69,14 @@ export default function Footer() {
             })}
           </div>
           <div className="footer-grid-1">
-            <h2>{footer.shopTitle}</h2>
+            <h4>{footer.shopTitle}</h4>
             {footer.shop.map((items, index) => {
               return <p key={index}>{items}</p>;
             })}
           </div>
 
           <div className="footer-grid-1">
-            <h2>{footer.conc}</h2>
+            <h4>{footer.conc}</h4>
             <Link
               className="footer-conc"
               to={"/contact"}

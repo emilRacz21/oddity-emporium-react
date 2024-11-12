@@ -1,7 +1,6 @@
 import "./Header.scss";
 import { header } from "../../content";
 import { Link, useNavigate } from "react-router-dom";
-const { logo } = header;
 import { useContext } from "react";
 import { ThemeContext } from "../../ThemeProvider";
 
@@ -13,7 +12,7 @@ export default function Header() {
     <header>
       <section className="header-section">
         <img
-          src={logo}
+          src={header.logo}
           alt="logo"
           onClick={() => {
             setActiveIndex(0);

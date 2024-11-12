@@ -18,6 +18,10 @@
   grid-template-columns: 1fr 1fr;
   width: 80rem;
 }
+.contact-center {
+  display: flex;
+  justify-content: center;
+}
 .contact-grid {
   p {
     font-size: 1.4rem;
@@ -40,25 +44,6 @@
     color: red;
   }
 }
-.contact-social-row {
-  display: flex;
-  flex-direction: column;
-
-  img {
-    width: 2rem;
-    height: 2rem;
-  }
-  p {
-    font-size: 1rem;
-    margin: 0 1rem;
-  }
-  h2 {
-    a {
-      color: rgb(200, 47, 47);
-    }
-  }
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;

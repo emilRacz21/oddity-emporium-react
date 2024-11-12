@@ -32,8 +32,9 @@
 
   margin: 0 auto;
   padding: 4rem 0;
-  h2 {
+  h4 {
     margin: 0;
+    font-size: $font-footer;
     color: $color-blue;
   }
   p {
@@ -63,9 +64,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  h2 {
+  h4 {
     line-height: 1.7rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
+    color: $color-blue;
+    font-size: $font-footer;
   }
   img {
     width: 6rem;

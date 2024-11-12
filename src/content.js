@@ -201,12 +201,25 @@ import call from "../src/assets/svg/call.svg";
 import mail from "../src/assets/svg/mail.svg";
 import location from "../src/assets/svg/location.svg";
 import calendar from "../src/assets/svg/calendar.svg";
-export const contactOpen = {
-  img: calendar,
-  alt: `Icon of Calendar`,
-  titlea: `We are open monday - friday : `,
-  titleb: ` 8AM - 10PM `,
-};
+
+export const contactForm = [
+  {
+    title: "Name",
+    type: "text",
+    name: "Name",
+  },
+  {
+    title: "Phone number",
+    type: "number",
+    name: "Phone",
+  },
+  {
+    title: "E-mail",
+    type: "email",
+    name: "Email",
+  },
+];
+
 export const contact = [
   {
     img: call,
@@ -225,6 +238,12 @@ export const contact = [
     alt: "Icon of Location",
     title: "Location",
     desc: "Decatur Blvd unit a, Las Vegas, US",
+  },
+  {
+    img: calendar,
+    alt: "Icon of Calendar",
+    title: "Open hours",
+    desc: "Monday - Friday : 8AM - 10PM",
   },
 ];
 export const aboutCite = [

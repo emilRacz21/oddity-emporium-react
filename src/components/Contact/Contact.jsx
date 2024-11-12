@@ -1,6 +1,7 @@
 import "./Contact.scss";
 import Navbar from "../Navbar/Navbar";
-import { contact, contactOpen } from "../../content";
+import { contact, contactForm } from "../../content";
+import FormApi from "../Api_/FormApi";
 export default function Contact() {
   return (
     <Navbar title={["Getting started", "Contact", "", "contact"]}>
@@ -18,30 +19,28 @@ export default function Contact() {
               </span>
             );
           })}
-          <div className="contact-social-row">
-            <h2>Open hours:</h2>
-            <div className="contact-information">
-              <img src={contactOpen.img} alt={contactOpen.alt} />
-              <p>
-                {contactOpen.titlea}
-                <a>{contactOpen.titleb}</a>
-              </p>
-            </div>
-          </div>
         </div>
         <section>
           <h2 className="contact-p">Send a message:</h2>
-          <form className="contact-form">
-            <label>Name</label>
-            <input type="text" />
-            <label>Phone number</label>
-            <input type="text" />
-            <label>E-mail</label>
-            <input type="text" />
+          <form className="contact-form" onSubmit={FormApi}>
+            {contactForm.map((items, index) => {
+              return (
+                <span className="contact-form" key={index}>
+                  <label>{items.title}</label>
+                  <input type={items.type} name={items.name} required />
+                </span>
+              );
+            })}
+
             <label>Input your message below</label>
-            <textarea name="message"></textarea>
+            <textarea name="Message" required></textarea>
+
+            <nav className="contact-center">
+              <button type="submit" className="contact-btn">
+                send now
+              </button>
+            </nav>
           </form>
-          <button className="contact-btn">send now</button>
         </section>
       </article>
     </Navbar>

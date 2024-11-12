@@ -13,7 +13,7 @@ export default function WhyOddity() {
               <div key={index} className="oddity-item">
                 <img src={img} alt={alt} />
                 <section className="oddity-description">
-                  <h2>{title}</h2>
+                  <h3>{title}</h3>
                   <p>{description}</p>
                 </section>
               </div>

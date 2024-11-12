@@ -8,7 +8,6 @@ export default function Login() {
         <div className="login-img">
           <img src={key} alt="Website logo" />
         </div>
-
         <section className="shop-section">
           <h2>Please log in to your account!</h2>
           <form>
@@ -17,7 +16,6 @@ export default function Login() {
             <label>Your password</label>
             <input type="password" />
           </form>
-
           <section className="shop-button">
             <p>*All labels are requrired</p>
             <button>Log in</button>

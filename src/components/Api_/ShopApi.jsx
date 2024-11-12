@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect } from "react";
-export default function Api() {
+export default function ShopApi() {
   const url = "https://atlantic-noisy-xylophone.glitch.me/inventions";
 
   useEffect(() => {
