@@ -21,23 +21,25 @@ export default function About() {
   return (
     <Navbar title={["Getting started", "About us", "", "about"]}>
       <section className="container">
-        <h2 className="container-h2">{aboutContent.title}</h2>
-        <p className="container-p">{aboutContent.content}</p>
-        <img src={aboutContent.img} alt={aboutContent.alt} />
-        <div className="about-grid">
+        <article className="about-about">
+          <h2 className="container-h2">{aboutContent.title}</h2>
+          <p className="container-p">{aboutContent.content}</p>
+          <img src={aboutContent.img} alt={aboutContent.alt} />
+        </article>
+        <span className="about-grid">
           {aboutSections.map((item, index) => (
             <div key={index} className={`about-item ${item.className}`}>
-              <h2 className="about-h2">{item.title}</h2>
+              <h3 className="about-h3">{item.title}</h3>
               <p className="about-p">{item.content}</p>
             </div>
           ))}
-        </div>
+        </span>
         <Slider className="about-slider" {...settings}>
           {aboutCite.map((item, index) => (
             <section key={index}>
               <h3 className="about-cite">{`"`}</h3>
               <p className="about-q">{item.content}</p>
-              <h2 className="about-center-h2">{item.author}</h2>
+              <h3 className="about-author">{item.author}</h3>
             </section>
           ))}
         </Slider>

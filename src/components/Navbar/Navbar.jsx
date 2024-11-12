@@ -7,9 +7,9 @@ export default function Navbar({ title, children }) {
   let [name = "Getting started", secondName, navFirst = "", navSecond] = title;
   return (
     <section className="main-section">
-      <section className="about-section">
-        <article className="about-container">
-          <nav className="about-nav">
+      <section className="navbar-section">
+        <article className="navbar-container">
+          <nav className="navbar-nav">
             <Link
               onClick={() => setActiveIndex(0)}
               className="navbar-cl"

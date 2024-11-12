@@ -1,24 +1,24 @@
 import "./Login.scss";
-import key from "../../assets/svg/key.svg";
 import Navbar from "../Navbar/Navbar";
+import { login } from "../../content";
 export default function Login() {
   return (
     <Navbar title={["Getting started", "Login", "", "login"]}>
-      <section className="shop-container">
+      <section className="login-container">
         <div className="login-img">
-          <img src={key} alt="Website logo" />
+          <img src={login.img} alt={login.alt} />
         </div>
-        <section className="shop-section">
-          <h2>Please log in to your account!</h2>
+        <section className="login-section">
+          <h2>{login.title}</h2>
           <form>
-            <label>Your username</label>
-            <input type="text" />
-            <label>Your password</label>
-            <input type="password" />
+            <label>{login.userLabel.title}</label>
+            <input type={login.userLabel.type} />
+            <label>{login.passwordLabel.title}</label>
+            <input type={login.passwordLabel.type} />
           </form>
-          <section className="shop-button">
-            <p>*All labels are requrired</p>
-            <button>Log in</button>
+          <section className="login-button">
+            <p>{login.desc}</p>
+            <button>{login.button}</button>
           </section>
         </section>
       </section>

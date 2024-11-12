@@ -4,10 +4,12 @@ import curiosities from "../src/assets/svg/curiosities.svg";
 import invisible from "../src/assets/svg/invisible.svg";
 import phantasmal from "../src/assets/svg/phantasmal.svg";
 import ghost from "../src/assets/svg/ghost.svg";
+import basket from "../src/assets/svg/basket.svg";
 import logo from "../src/assets/logo/logo.png";
 import pixel from "../src/assets/logo/pixel-city.mp4";
 export const header = {
   logo,
+  basket,
   navBtn: ["Getting started", "Shop", "Contact", "About us", "Login"],
 };
 
@@ -308,7 +310,9 @@ export const aboutCite = [
         I'm frustrated with a project—Google could learn a thing or two from these guys."`,
   },
 ];
+
 import shop from "../src/assets/logo/shop.png";
+
 export const aboutContent = {
   img: shop,
   alt: `Logo of Oddity Emporium`,
@@ -319,6 +323,7 @@ export const aboutContent = {
           extraordinary, Oddity Emporium curates an ever-evolving collection of
           items that defy explanation and spark curiosity.`,
 };
+
 export const aboutSections = [
   {
     title: `Our Story`,
@@ -341,3 +346,21 @@ export const aboutSections = [
     className: `about-correct-2`,
   },
 ];
+
+import key from "../src/assets/svg/key.svg";
+
+export const login = {
+  img: key,
+  alt: "Key icon, login",
+  title: "Please log in to your account!",
+  userLabel: {
+    title: "Your username",
+    type: "text",
+  },
+  passwordLabel: {
+    title: "Your password",
+    type: "password",
+  },
+  desc: "*All labels are requrired",
+  button: "Log in",
+};

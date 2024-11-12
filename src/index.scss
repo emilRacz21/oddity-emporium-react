@@ -18,6 +18,28 @@ $color-gold: rgb(231, 238, 19);
   border: none;
   transition: 0.3s ease;
 }
+@keyframes show-details {
+  0% {
+    opacity: 0;
+    transform: translateY(-5%) translate(14%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%) translate(14%);
+  }
+}
+
+@keyframes close-details {
+  0% {
+    opacity: 1;
+    transform: translateY(0%) translate(14%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-5%) translate(14%);
+  }
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;

@@ -1,5 +1,5 @@
 @use "../../index.scss" as *;
-.shop-container {
+.login-container {
   animation: fade-in 1s;
   width: 80rem;
   box-shadow: -10px -10px 1px rgb(6, 36, 53) inset;
@@ -22,7 +22,7 @@
   padding: 3rem;
   background-color: $background;
 }
-.shop-button {
+.login-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@
   }
 }
 
-.shop-section {
+.login-section {
   display: flex;
   flex-direction: column;
   justify-content: center;

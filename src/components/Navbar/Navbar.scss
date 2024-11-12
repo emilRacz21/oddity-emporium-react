@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
 }
-.about-nav {
+.navbar-nav {
   display: flex;
   margin: 0;
 
@@ -33,7 +33,7 @@
     }
   }
 }
-.about-section {
+.navbar-section {
   padding-top: 6rem;
   border-bottom: 4px solid;
   margin: 4rem 0;
@@ -41,7 +41,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.about-container {
+.navbar-container {
   display: flex;
   flex-direction: column;
   align-self: center;

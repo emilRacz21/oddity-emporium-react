@@ -10,11 +10,7 @@
   animation: fade-inn 1s;
   width: 80rem;
   flex-direction: column;
-  img {
-    width: 30rem;
-    place-self: center;
-    margin: 2rem;
-  }
+
   .container-h2 {
     color: $color-blue;
     font-size: $font-second;
@@ -24,6 +20,16 @@
     margin-top: 0;
     font-size: 1.5rem;
     text-align: justify;
+  }
+
+  .about-about {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 30rem;
+      place-self: center;
+      margin: 2rem;
+    }
   }
 }
 
@@ -36,9 +42,10 @@
 }
 
 .about-item {
-  .about-h2 {
+  .about-h3 {
     color: $color-blue;
     margin: 0;
+    font-size: $font-second;
     text-align: start;
   }
 
@@ -92,9 +99,10 @@
   }
 }
 
-.about-center-h2 {
+.about-author {
   text-align: center;
   margin: 0;
+  font-size: $font-footer;
   margin-bottom: 1rem;
 }
 
