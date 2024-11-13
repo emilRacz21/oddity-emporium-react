@@ -20,13 +20,13 @@ header {
   position: absolute;
   border-radius: 1rem;
   transform: translate(14%);
-  top: 5.5rem;
+  top: 6rem;
   width: 30rem;
   height: 20rem;
   background-color: rgb(40, 50, 61);
   box-shadow: -10px -10px 1px rgb(6, 36, 53) inset;
   opacity: 1;
-  animation: show-details 0.3s;
+
   p {
     text-align: center;
   }
@@ -70,6 +70,12 @@ header {
     p {
       font-size: $font-p;
     }
+  }
+  &.disabled {
+    animation: close-details 0.3s;
+  }
+  &.active {
+    animation: show-details 0.3s;
   }
 }
 

@@ -18,6 +18,14 @@ $color-gold: rgb(231, 238, 19);
   border: none;
   transition: 0.3s ease;
 }
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 67%;
+  }
+}
 @keyframes show-details {
   0% {
     opacity: 0;

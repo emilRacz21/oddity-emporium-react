@@ -16,14 +16,6 @@
   background-size: contain;
 }
 
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 67%;
-  }
-}
 @keyframes blink {
   50% {
     border-color: transparent;

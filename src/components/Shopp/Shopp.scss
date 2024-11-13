@@ -1,1 +1,91 @@
 @use "../../index.scss" as *;
+.shop-container {
+  display: flex;
+  animation: fade-in 1s;
+  margin-bottom: 3rem;
+  width: 80rem;
+  background-color: $main-color;
+  img {
+    height: 20rem;
+  }
+  p {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  h2 {
+    margin: 0;
+    color: $color-blue;
+    font-size: 1.6rem;
+  }
+  a {
+    color: rgb(127, 133, 139);
+    font-size: $font-p;
+  }
+}
+.shop-items {
+  margin-bottom: 2rem;
+  display: flex;
+  width: 80rem;
+  flex-direction: column;
+  justify-content: center;
+}
+.shop-section {
+  display: grid;
+  padding: 0 2.4rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.item-section-1 {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.item-section-2 {
+  margin: 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: end;
+  h2 {
+    color: white;
+  }
+}
+.shop-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: end;
+}
+.shop-buttons-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    cursor: pointer;
+    color: white;
+  }
+  button {
+    @include button;
+    padding: 0.5rem 2rem;
+    margin: 0 1rem;
+    background-color: $color-blue;
+
+    &:hover {
+      background-color: rgb(22, 70, 158);
+    }
+  }
+
+  div {
+    cursor: pointer;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-left: 1rem;
+    border-right: 0.2rem solid $color-blue;
+    border-bottom: 0.2rem solid $color-blue;
+    transform: rotateZ(45deg) translate(-30%);
+  }
+  &.add {
+    justify-content: start;
+    padding-left: 4.6rem;
+  }
+}

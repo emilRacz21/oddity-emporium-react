@@ -1,0 +1,46 @@
+@use "../../index.scss" as *;
+
+.loading-animation {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+.loading-squares {
+  width: 90px;
+  height: 90px;
+  background-image: url("../../assets/logo/coin-anim.png");
+  animation: play 0.6s steps(13) infinite;
+  background-repeat: no-repeat;
+}
+
+.loading-text {
+  font-size: 1.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing-dots 2s steps(10) infinite;
+}
+@keyframes play {
+  100% {
+    background-position: -1170px;
+  }
+}
+@keyframes typing-dots {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 100%;
+  }
+  50% {
+    width: 100%;
+  }
+  75% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
