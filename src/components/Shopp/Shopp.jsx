@@ -1,17 +1,16 @@
 import "./Shopp.scss";
 import Navbar from "../Navbar/Navbar";
-
 import ShopApi from "../Api_/ShopApi";
 import { useState } from "react";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
 export default function Shopp() {
   const [data, setData] = useState([]);
-  ShopApi(setData);
-  console.log(data);
+  const [responseText, setResponseText] = useState();
+  ShopApi(setData, setResponseText);
   return (
     <Navbar title={["Getting started", "Shop", "", "shop"]}>
       {data.length == 0 ? (
-        <LoadingAnimation />
+        <LoadingAnimation responseText={responseText} />
       ) : (
         data.map((items, index) => {
           return (

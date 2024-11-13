@@ -4,12 +4,20 @@ import { useEffect } from "react";
 const url = import.meta.env.VITE_SHOP_API;
 
 //GET - get all items from API
-export default function ShopApi(setData) {
+export default function ShopApi(setData, setResponseText) {
   useEffect(() => {
     axios
       .get(url)
-      .then((response) => setData(response.data))
-      .catch((error) => setData([error]));
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        setResponseText(
+          <p className="loading-text error">
+            {error + " Please try again later!"}
+          </p>
+        );
+      });
   }, []);
 }
 
