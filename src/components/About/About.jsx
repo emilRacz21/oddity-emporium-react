@@ -19,7 +19,7 @@ export default function About() {
     autoplaySpeed: 2000,
   };
   return (
-    <Navbar title={["Getting started", "About us", "", "about"]}>
+    <Navbar title={["Getting started", "About"]}>
       <section className="container">
         <article className="about-about">
           <h2 className="container-h2">{aboutContent.title}</h2>

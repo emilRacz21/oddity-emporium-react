@@ -14,7 +14,7 @@ export default function Contact() {
   };
 
   return (
-    <Navbar title={["Getting started", "Contact", "", "contact"]}>
+    <Navbar title={["Getting started", "Contact"]}>
       <article className="contact-container">
         <div className="contact-grid">
           <h2 className="contact-p">Personal Information:</h2>

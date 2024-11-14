@@ -364,3 +364,17 @@ export const login = {
   desc: "*All labels are requrired",
   button: "Log in",
 };
+
+export function shopParameters(shopParams) {
+  return [
+    { title: "Patent number", desc: shopParams.patent_number },
+    { title: "Power source", desc: shopParams.power_source },
+    { title: "Created by", desc: shopParams.creator },
+    { title: "Uses", desc: shopParams.uses },
+    { title: "Material", desc: shopParams.material },
+    { title: "Weight", desc: shopParams.weight },
+    { title: "Date of invention", desc: shopParams.date_of_invention },
+    { title: "Operating time", desc: shopParams.operating_time },
+    { title: "Category", desc: shopParams.category },
+  ];
+}

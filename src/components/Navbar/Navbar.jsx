@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../store/theme-context";
 export default function Navbar({ title, children }) {
   const { setActiveIndex } = useContext(ThemeContext);
-  let [name = "Getting started", secondName, navFirst = "", navSecond] = title;
+  let [name = "Getting started", secondName = ""] = title;
   return (
     <section className="main-section">
       <section className="navbar-section">
@@ -13,12 +13,12 @@ export default function Navbar({ title, children }) {
             <Link
               onClick={() => setActiveIndex(0)}
               className="navbar-cl"
-              to={`/${navFirst}`}
+              to={`/`}
             >
               {name}
             </Link>
             <p>-</p>
-            <Link className="navbar-c2" to={`/${navSecond}`}>
+            <Link className="navbar-c2" to={`/${secondName.toLowerCase()}`}>
               {secondName}
             </Link>
           </nav>

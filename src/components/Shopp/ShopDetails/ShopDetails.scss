@@ -1,0 +1,43 @@
+@use "../../../index.scss" as *;
+.details-text {
+  text-align: center;
+  margin-bottom: 0rem;
+  margin-top: 2rem;
+  font-size: $font-second;
+  font-weight: 800;
+  color: $color-blue;
+}
+.details-flex {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 50rem;
+  place-self: center;
+  grid-template-columns: 1fr 1fr;
+}
+.details-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h3 {
+    margin-left: 1rem;
+  }
+  p {
+    margin-right: 1rem;
+    font-size: $font-p;
+  }
+  &.active {
+    background-color: $background;
+  }
+  &.default {
+    color: rgb(165, 165, 165);
+  }
+}
+.shop-desc {
+  width: 80rem;
+  p {
+    margin: 2rem 4rem;
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+}

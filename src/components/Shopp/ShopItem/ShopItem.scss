@@ -1,31 +1,4 @@
-@use "../../index.scss" as *;
-
-.shop-searchbox {
-  animation: fade-in 1s;
-  padding-bottom: 1rem;
-  width: 80rem;
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: center;
-  input {
-    font-size: $font-p;
-    @include form;
-    background-color: $main-color;
-    height: 3rem;
-    width: 40rem;
-    border-top-right-radius: 0rem;
-    border-bottom-right-radius: 0rem;
-    border: 2px solid white;
-  }
-  select {
-    @include form;
-    border-top-left-radius: 0rem;
-    border-bottom-left-radius: 0rem;
-    border: 2px solid white;
-    text-align: center;
-    width: 15rem;
-  }
-}
+@use "../../../index.scss" as *;
 .shop-details {
   display: flex;
   flex-direction: column;
@@ -38,7 +11,7 @@
   &.active {
     margin-bottom: 3rem;
     margin-top: 0.2rem;
-    max-height: 50rem;
+    max-height: 120rem;
     opacity: 1;
   }
 }

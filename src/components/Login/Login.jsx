@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import { login } from "../../content";
 export default function Login() {
   return (
-    <Navbar title={["Getting started", "Login", "", "login"]}>
+    <Navbar title={["Getting started", "Login"]}>
       <section className="login-container">
         <div className="login-img">
           <img src={login.img} alt={login.alt} />
