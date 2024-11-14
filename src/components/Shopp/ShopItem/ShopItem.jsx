@@ -12,11 +12,7 @@ export default function ShopItem({
 }) {
   return (
     <section className="shop-all-content">
-      <section
-        className={`shop-container ${
-          showDetails && selectedSectionId === index ? "" : "disabled"
-        }`}
-      >
+      <section className="shop-container">
         <img src={item.image} alt={item.name} />
         <section className="shop-items">
           <section className="shop-section">

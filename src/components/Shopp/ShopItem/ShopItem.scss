@@ -3,27 +3,26 @@
   display: flex;
   flex-direction: column;
   max-height: 0;
+  margin-top: 0.2rem;
   overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0s ease-out;
+  transition: max-height 0.5s ease-in, opacity 0.5s ease-out;
   opacity: 0;
   background-color: $main-color;
 
   &.active {
-    margin-bottom: 3rem;
     margin-top: 0.2rem;
     max-height: 120rem;
     opacity: 1;
   }
+}
+.shop-all-content {
+  margin-bottom: 3rem;
 }
 .shop-container {
   display: flex;
   animation: fade-in 1s;
   background-color: $main-color;
   width: 80rem;
-
-  &.disabled {
-    margin-bottom: 3rem;
-  }
 
   img {
     height: 20rem;
