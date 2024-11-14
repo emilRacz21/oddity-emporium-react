@@ -1,11 +1,14 @@
 import ShopDetails from "../ShopDetails/ShopDetails";
 import "./ShopItem.scss";
+import starsDisabled from "../../../assets/svg/star-disabled.svg";
+import starsEnabled from "../../../assets/svg/star-active.svg";
 export default function ShopItem({
   showDetails,
   selectedSectionId,
   index,
   item,
   handleShowDetails,
+  stars,
 }) {
   return (
     <section className="shop-all-content">
@@ -24,10 +27,24 @@ export default function ShopItem({
                   <a>Category:</a>
                   <p>{item.category}</p>
                 </span>
-                <span>
-                  <a>Dimensions:</a>
-                  <p>{item.dimensions}</p>
-                </span>
+                <div className="shop-rate-stars">
+                  <div>
+                    {Array.from({ length: 5 }).map((_, starIndex) => {
+                      return (
+                        <img
+                          key={starIndex}
+                          src={
+                            starIndex < stars[index]
+                              ? starsEnabled
+                              : starsDisabled
+                          }
+                          alt="Star icon"
+                        />
+                      );
+                    })}
+                  </div>
+                  <a>{`Reviews (${item.reviews.length})`}</a>
+                </div>
               </div>
             </section>
             <section className="item-section-2">

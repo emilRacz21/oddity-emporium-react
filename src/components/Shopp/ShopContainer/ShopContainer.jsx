@@ -1,12 +1,13 @@
 import "./ShopContainer.scss";
 import Navbar from "../../Navbar/Navbar";
 import ShopApi from "../../Api_/ShopApi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LoadingAnimation from "../../LoadingAnimation/LoadingAnimation";
 import ShopItem from "../ShopItem/ShopItem";
 
 export default function ShopContainer() {
   const [data, setData] = useState([]);
+  const [stars, setStars] = useState([]);
   const [allData, setAllData] = useState([]);
   const [showDetails, setShowDetails] = useState(false);
   const [responseText, setResponseText] = useState();
@@ -22,6 +23,20 @@ export default function ShopContainer() {
     setShowDetails((value) => !value);
     setSelectedSectionId(index);
   };
+
+  //Stars
+  useEffect(() => {
+    data.map((_, index) => {
+      const totalSum = data[index].reviews.reduce(
+        (acc, review) => acc + review.rating,
+        0
+      );
+      const averageGrade = Math.round(totalSum / data[index].reviews.length);
+      setStars((prev) => {
+        return [...prev, averageGrade];
+      });
+    });
+  }, [data]);
 
   function handleSearchItems(event) {
     const text = event.target.value.toLowerCase();
@@ -76,6 +91,7 @@ export default function ShopContainer() {
             index={index}
             item={item}
             handleShowDetails={handleShowDetails}
+            stars={stars}
           />
         ))
       )}

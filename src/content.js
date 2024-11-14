@@ -367,14 +367,14 @@ export const login = {
 
 export function shopParameters(shopParams) {
   return [
-    { title: "Patent number", desc: shopParams.patent_number },
-    { title: "Power source", desc: shopParams.power_source },
     { title: "Created by", desc: shopParams.creator },
+    { title: "Power source", desc: shopParams.power_source },
+    { title: "Category", desc: shopParams.category },
     { title: "Uses", desc: shopParams.uses },
+    { title: "Operating time", desc: shopParams.operating_time },
     { title: "Material", desc: shopParams.material },
     { title: "Weight", desc: shopParams.weight },
     { title: "Date of invention", desc: shopParams.date_of_invention },
-    { title: "Operating time", desc: shopParams.operating_time },
-    { title: "Category", desc: shopParams.category },
+    { title: "Dimensions", desc: shopParams.dimensions },
   ];
 }
