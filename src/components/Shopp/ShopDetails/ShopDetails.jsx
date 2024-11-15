@@ -1,6 +1,6 @@
 import "./ShopDetails.scss";
 import { shopParameters } from "../../../content";
-
+import avatar from "../../../assets/svg/avatar.svg";
 import { useState } from "react";
 import { postReviewInvention } from "../../Api_/ShopApi";
 import DropdownMenu from "../../DropdownMenu/DropdownMenu";
@@ -9,7 +9,7 @@ const reviewObj = {
   reviewer: "",
   rating: "",
   comment: "",
-  user_image: "",
+  user_image: avatar,
 };
 
 export default function ShopDetails({ data, setData }) {
