@@ -1,6 +1,6 @@
 import "./ShopDetails.scss";
 import { shopParameters } from "../../../content";
-import logo from "../../../assets/svg/ghost.svg";
+
 import { useState } from "react";
 import { postReviewInvention } from "../../Api_/ShopApi";
 import DropdownMenu from "../../DropdownMenu/DropdownMenu";
@@ -73,12 +73,16 @@ export default function ShopDetails({ data, setData }) {
             return (
               <section key={index} className="shop-review-container">
                 <section className="shop-review-item">
-                  <img src={logo} alt="logo" />
+                  <div className="shop-review-item-div">
+                    <img src={comment.user_image} alt="logo" />
+                  </div>
+
                   <div className="reviewer">
                     <h2>{comment.reviewer}</h2>
                     <p>{`Rating: ${comment.rating}`}</p>
                   </div>
                 </section>
+
                 <p className="comment">{comment.comment}</p>
               </section>
             );

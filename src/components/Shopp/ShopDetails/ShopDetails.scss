@@ -63,11 +63,18 @@ hr {
 .shop-review-item {
   display: flex;
   align-items: center;
-  img {
+  .shop-review-item-div {
     margin-right: 1rem;
+    margin-top: 0.7rem;
+    display: flex;
+    background-color: rgba(131, 131, 131, 0.353);
+    border: 1px solid rgba(226, 226, 226, 0.329);
     border-radius: 50%;
-    padding: 1rem 0;
-    width: 5rem;
+    padding: 0.9rem 1.6rem;
+  }
+  img {
+    width: 3rem;
+    margin: 0;
   }
   .reviewer {
     h2 {

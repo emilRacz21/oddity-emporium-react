@@ -47,6 +47,7 @@ export default function ShopContainer() {
       );
       setData(filteredData);
     }
+    setShowDetails(false);
   }
   document
     .querySelectorAll(".details-row")
