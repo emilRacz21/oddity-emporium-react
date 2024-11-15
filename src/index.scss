@@ -1,4 +1,5 @@
 $main-color: rgba(40, 50, 61, 0.869);
+$shop-main-color: rgb(40, 50, 61);
 $main-border: 4px solid rgb(41, 41, 41);
 $color-blue: rgb(37, 99, 215);
 $background: #18181f;
@@ -128,4 +129,22 @@ body {
   font-optical-sizing: auto;
   margin: 0;
   padding: 0;
+}
+
+.shop-square-button {
+  cursor: pointer;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 1rem;
+  border-right: 0.2rem solid $color-blue;
+  border-bottom: 0.2rem solid $color-blue;
+  transition: 0.3s ease;
+  &.disabled {
+    transform: rotateZ(45deg);
+  }
+
+  &.active {
+    transform: rotateZ(-135deg);
+    margin-top: 0.6rem;
+  }
 }

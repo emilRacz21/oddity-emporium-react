@@ -1,31 +1,18 @@
 @use "../../../index.scss" as *;
-.shop-details {
-  display: flex;
-  flex-direction: column;
-  max-height: 0;
-  margin-top: 0.2rem;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in, opacity 0.5s ease-out;
-  opacity: 0;
-  background-color: $main-color;
 
-  &.active {
-    margin-top: 0.2rem;
-    max-height: 120rem;
-    opacity: 1;
-  }
-}
 .shop-all-content {
   margin-bottom: 3rem;
 }
 .shop-container {
+  border-radius: 1rem;
   display: flex;
   animation: fade-in 1s;
   background-color: $main-color;
   width: 80rem;
 
   img {
-    height: 20rem;
+    border-radius: 1rem;
+    height: 21.5rem;
   }
   p {
     margin: 0;
@@ -100,24 +87,6 @@
     }
   }
 
-  .shop-square-button {
-    cursor: pointer;
-    width: 0.5rem;
-
-    height: 0.5rem;
-    margin-left: 1rem;
-    border-right: 0.2rem solid $color-blue;
-    border-bottom: 0.2rem solid $color-blue;
-    transition: 0.3s ease;
-    &.disabled {
-      transform: rotateZ(45deg);
-    }
-
-    &.active {
-      transform: rotateZ(-135deg);
-      margin-top: 0.6rem;
-    }
-  }
   &.add {
     justify-content: start;
     padding-left: 4.6rem;

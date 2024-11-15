@@ -4,7 +4,6 @@ import ShopApi from "../../Api_/ShopApi";
 import { useState, useEffect } from "react";
 import LoadingAnimation from "../../LoadingAnimation/LoadingAnimation";
 import ShopItem from "../ShopItem/ShopItem";
-
 export default function ShopContainer() {
   const [data, setData] = useState([]);
   const [stars, setStars] = useState([]);
@@ -24,18 +23,15 @@ export default function ShopContainer() {
     setSelectedSectionId(index);
   };
 
-  //Stars
   useEffect(() => {
-    data.map((_, index) => {
-      const totalSum = data[index].reviews.reduce(
+    const calculatedStars = data.map((item) => {
+      const totalSum = item.reviews.reduce(
         (acc, review) => acc + review.rating,
         0
       );
-      const averageGrade = Math.round(totalSum / data[index].reviews.length);
-      setStars((prev) => {
-        return [...prev, averageGrade];
-      });
+      return Math.round(totalSum / item.reviews.length);
     });
+    setStars(calculatedStars);
   }, [data]);
 
   function handleSearchItems(event) {
@@ -62,7 +58,6 @@ export default function ShopContainer() {
     );
 
   const uniqueCategories = [...new Set(allData.map((items) => items.category))];
-
   return (
     <Navbar title={["Getting started", "Shop"]}>
       <section className="shop-searchbox">
@@ -90,6 +85,7 @@ export default function ShopContainer() {
             selectedSectionId={selectedSectionId}
             index={index}
             item={item}
+            setData={setData}
             handleShowDetails={handleShowDetails}
             stars={stars}
           />

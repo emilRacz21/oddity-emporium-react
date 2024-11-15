@@ -1,11 +1,22 @@
 @use "../../../index.scss" as *;
 .details-text {
-  text-align: center;
-  margin-bottom: 0rem;
-  margin-top: 2rem;
+  text-align: start;
+  margin: 1rem 4rem;
   font-size: $font-second;
   font-weight: 800;
-  color: $color-blue;
+}
+.details-text-1 {
+  text-align: start;
+  margin: 1rem -0.7rem;
+  font-size: $font-second;
+  font-weight: 800;
+}
+hr {
+  width: 72rem;
+  border: 0.1px solid rgba(255, 255, 255, 0.091);
+}
+.shop-margin {
+  margin: 2rem 0;
 }
 .details-flex {
   display: flex;
@@ -36,8 +47,98 @@
 .shop-desc {
   width: 80rem;
   p {
-    margin: 2rem 4rem;
+    margin: 0rem 4rem;
     font-size: 1.4rem;
     text-align: justify;
+  }
+}
+.shop-review-container {
+  margin: 0rem 4rem;
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.071);
+  .comment {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+.shop-review-item {
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 1rem;
+    border-radius: 50%;
+    padding: 1rem 0;
+    width: 5rem;
+  }
+  .reviewer {
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+.review-form {
+  margin: 0rem 4rem;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    @include form;
+    margin-bottom: 0.4rem;
+    background-color: $background;
+
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+  label {
+    font-size: 1.4rem;
+  }
+  textarea {
+    @include form;
+    font-size: 1.4rem;
+    background-color: $background;
+    height: 6.4rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    resize: none;
+  }
+
+  div {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.button-review {
+  display: flex;
+  justify-content: center;
+  button {
+    @include button;
+    padding: 1rem 2rem;
+    background-color: $color-blue;
+
+    &:hover {
+      background-color: rgb(20, 53, 113);
+    }
+  }
+}
+.shop-square-button {
+  &.added {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 1.7rem;
+    border-right: 0.4rem solid $color-blue;
+    border-bottom: 0.4rem solid $color-blue;
+    &.disabled {
+      margin-bottom: 0.6rem;
+    }
+    &.active {
+      margin-top: 0.6rem;
+    }
   }
 }

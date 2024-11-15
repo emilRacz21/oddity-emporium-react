@@ -2,6 +2,7 @@ import ShopDetails from "../ShopDetails/ShopDetails";
 import "./ShopItem.scss";
 import starsDisabled from "../../../assets/svg/star-disabled.svg";
 import starsEnabled from "../../../assets/svg/star-active.svg";
+import DropdownMenu from "../../DropdownMenu/DropdownMenu";
 export default function ShopItem({
   showDetails,
   selectedSectionId,
@@ -9,6 +10,7 @@ export default function ShopItem({
   item,
   handleShowDetails,
   stars,
+  setData,
 }) {
   return (
     <section className="shop-all-content">
@@ -86,13 +88,13 @@ export default function ShopItem({
           </nav>
         </section>
       </section>
-      <section
-        className={`shop-details ${
-          showDetails && selectedSectionId === index ? "active" : ""
-        }`}
+      <DropdownMenu
+        toggle={showDetails}
+        selectedSectionId={selectedSectionId}
+        index={index}
       >
-        <ShopDetails item={item} />
-      </section>
+        <ShopDetails data={item} setData={setData} />
+      </DropdownMenu>
     </section>
   );
 }
