@@ -4,6 +4,7 @@ import avatar from "../../../assets/svg/avatar.svg";
 import { useState } from "react";
 import { postReviewInvention } from "../../Api_/ShopApi";
 import DropdownMenu from "../../DropdownMenu/DropdownMenu";
+import RateStars from "../../RateStars/RateStars";
 
 const reviewObj = {
   reviewer: "",
@@ -11,7 +12,6 @@ const reviewObj = {
   comment: "",
   user_image: avatar,
 };
-
 export default function ShopDetails({ data, setData }) {
   const [review, setReview] = useState(reviewObj);
   const [showComments, setShowComments] = useState(false);
@@ -76,13 +76,16 @@ export default function ShopDetails({ data, setData }) {
                   <div className="shop-review-item-div">
                     <img src={comment.user_image} alt="logo" />
                   </div>
-
                   <div className="reviewer">
-                    <h2>{comment.reviewer}</h2>
-                    <p>{`Rating: ${comment.rating}`}</p>
+                    <h2>
+                      {index + 1}. {comment.reviewer}
+                    </h2>
+                    <RateStars
+                      rateMark={Math.round(comment.rating)}
+                      index={index}
+                    ></RateStars>
                   </div>
                 </section>
-
                 <p className="comment">{comment.comment}</p>
               </section>
             );
@@ -114,16 +117,20 @@ export default function ShopDetails({ data, setData }) {
                   }}
                   required
                 />
-                <label>Rating:</label>
+                <label>Rating (1-5):</label>
                 <input
+                  step="1"
                   value={review.rating}
                   type="number"
                   max="5"
                   min="1"
-                  onChange={(e) => {
-                    setReview((prev) => {
-                      return { ...prev, ["rating"]: e.target.value };
-                    });
+                  onInput={(e) => {
+                    const value = e.target.value;
+                    if (value >= 1 && value <= 5) {
+                      setReview((prev) => ({ ...prev, rating: value }));
+                    } else {
+                      e.target.value = review.rating;
+                    }
                   }}
                   required
                 />
