@@ -25,4 +25,14 @@
     width: 10rem;
     font-size: 1rem;
   }
+  .shop-invention-button-add {
+    @include button;
+    margin: 0 2rem;
+    padding: 0.4rem 3rem;
+    font-size: 1.3rem;
+    background-color: $color-blue;
+    &:hover {
+      background-color: rgb(22, 70, 158);
+    }
+  }
 }

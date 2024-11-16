@@ -14,20 +14,19 @@ export default function Footer() {
   });
   function handleselectedQuestion(index) {
     setDialogContent(dialogContents[index]);
-    document.getElementById("root").style.filter = "blur(26px)";
     setIsModalOpen(true);
   }
   return (
     <>
       <section className="footer-section">
         <ShowModal
-          dialogContent={dialogContent}
-          isOpen={isModalOpen}
-          onClose={() => {
-            setIsModalOpen(false);
-            document.getElementById("root").style.filter = "blur(0px)";
-          }}
-        />
+          modalStatus={isModalOpen}
+          modalDisable={setIsModalOpen}
+          title={dialogContent.title}
+          closeModal={setIsModalOpen}
+        >
+          <p>{dialogContent.description}</p>
+        </ShowModal>
         <div className="footer-container">
           <div className="footer-grid-1">
             <div className="footer-grid-1-row">

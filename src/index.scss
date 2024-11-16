@@ -110,11 +110,27 @@ $color-gold: rgb(231, 238, 19);
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: $background;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  &.disabled {
+    backdrop-filter: none;
+  }
 }
+.root-active {
+  animation: blur-in 0.5s;
+  overflow: hidden;
+  filter: blur(1.6rem);
+  pointer-events: none;
+}
+
+@keyframes blur-in {
+  0% {
+    filter: blur(0rem);
+  }
+  100% {
+    filter: blur(1.6rem);
+  }
+}
+
 @keyframes slowGif {
   0% {
     background-position: 0 0;

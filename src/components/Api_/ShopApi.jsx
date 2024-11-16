@@ -1,6 +1,6 @@
 import axios from "axios";
 //import { useEffect } from "react";
-const url = import.meta.env.VITE_SHOP_API;
+const url = "https://atlantic-noisy-xylophone.glitch.me/inventions";
 
 //GET - get all items from API
 export default async function fetchShopData(setData, setResponseText) {
@@ -15,29 +15,12 @@ export default async function fetchShopData(setData, setResponseText) {
 }
 
 //POST - add a new item to API
-export function handleAddInvention() {
-  const newInvention = {
-    name: "Czesc to ja",
-    description: "Opis",
-    uses: "coś",
-    creator: "ja",
-    image: "sssssss",
-    date_of_invention: "12.12.22222",
-    patent_number: "12121211212",
-    price: "222222",
-    weight: "21123123",
-    dimensions: "23132321",
-    power_source: "sssss",
-    operating_time: "qwqeqwewqe",
-    material: "dasdasdad",
-    status: "ssss",
-    category: "sasaas",
-    target_audience: "targetAudience",
-  };
-
-  axios
-    .post(url, newInvention)
-    .then((response) => console.log(response))
+export function handleAddInvention(newItems, setData) {
+  return axios
+    .post(url, newItems)
+    .then(() => {
+      fetchShopData(setData, () => {});
+    })
     .catch((error) => console.log(error));
 }
 
