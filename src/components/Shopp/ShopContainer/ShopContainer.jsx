@@ -1,6 +1,6 @@
 import "./ShopContainer.scss";
 import Navbar from "../../Navbar/Navbar";
-import ShopApi from "../../Api_/ShopApi";
+import fetchShopData from "../../Api_/ShopApi";
 import { useState, useEffect } from "react";
 import LoadingAnimation from "../../LoadingAnimation/LoadingAnimation";
 import ShopItem from "../ShopItem/ShopItem";
@@ -12,11 +12,13 @@ export default function ShopContainer() {
   const [responseText, setResponseText] = useState();
   const [selectedSectionId, setSelectedSectionId] = useState(null);
 
-  ShopApi((newData) => {
-    setData(newData);
-    setAllData(newData);
-    setResponseText(<p className="loading-text error">Nothing found!</p>);
-  }, setResponseText);
+  useEffect(() => {
+    fetchShopData((newData) => {
+      setData(newData);
+      setAllData(newData);
+      setResponseText(<p className="loading-text error">Nothing found!</p>);
+    }, setResponseText);
+  }, []);
 
   const handleShowDetails = (index) => {
     setShowDetails((value) => !value);

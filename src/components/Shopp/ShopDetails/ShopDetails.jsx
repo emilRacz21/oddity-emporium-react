@@ -1,6 +1,5 @@
 import "./ShopDetails.scss";
 import { shopParameters } from "../../../content";
-import avatar from "../../../assets/svg/avatar.svg";
 import { useState } from "react";
 import { postReviewInvention } from "../../Api_/ShopApi";
 import DropdownMenu from "../../DropdownMenu/DropdownMenu";
@@ -10,27 +9,20 @@ const reviewObj = {
   reviewer: "",
   rating: "",
   comment: "",
-  user_image: avatar,
+  user_image: "",
 };
 export default function ShopDetails({ data, setData }) {
   const [review, setReview] = useState(reviewObj);
   const [showComments, setShowComments] = useState(false);
   const [showAddComments, setShowAddComments] = useState(false);
   const shopParams = shopParameters(data);
+
   function handleSendComments(e) {
     e.preventDefault();
-    postReviewInvention(review, data._id);
-    const updatedProduct = {
-      ...data,
-      reviews: [...data.reviews, review],
-    };
-    setData((prevData) =>
-      prevData.map((product) =>
-        product._id === data._id ? updatedProduct : product
-      )
-    );
     setReview(reviewObj);
+    postReviewInvention(review, data._id, setData);
   }
+
   return (
     <section className="shop-margin">
       <section className="shop-desc">
