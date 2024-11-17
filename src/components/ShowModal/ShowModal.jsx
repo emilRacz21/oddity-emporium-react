@@ -7,11 +7,15 @@ export default function ShowModal({
   title,
   modalDisable,
 }) {
-  if (document.getElementById("root") != undefined) {
-    modalStatus
-      ? document.getElementById("root").classList.add("root-active")
-      : document.getElementById("root").classList.remove("root-active");
-  }
+  modalStatus
+    ? (() => {
+        document.getElementById("root").classList.add("active");
+        document.getElementById("root").classList.remove("disabled");
+      })()
+    : (() => {
+        document.getElementById("root").classList.remove("active");
+        document.getElementById("root").classList.add("disabled");
+      })();
 
   return createPortal(
     <dialog

@@ -15,13 +15,13 @@ export default async function fetchShopData(setData, setResponseText) {
 }
 
 //POST - add a new item to API
-export function handleAddInvention(newItems, setData) {
+export function handleAddInvention(newItems, setData, setErrorMessage) {
   return axios
     .post(url, newItems)
     .then(() => {
       fetchShopData(setData, () => {});
     })
-    .catch((error) => console.log(error));
+    .catch((error) => setErrorMessage(`Try again later (${error.name})`));
 }
 
 //POST - add a new review to existing invention

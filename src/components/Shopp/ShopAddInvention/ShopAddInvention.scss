@@ -1,0 +1,69 @@
+@use "../../../index.scss" as *;
+
+.shop-invention-add-form {
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 0.4fr 1fr;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  hr {
+    width: 1px;
+    height: 99%;
+    background-color: rgba(255, 255, 255, 0.303);
+    border: none;
+  }
+  label {
+    margin-left: 0.2rem;
+    margin-top: 0.5rem;
+    font-size: $font-p;
+    &.active {
+      color: rgb(255, 73, 73);
+    }
+  }
+  input {
+    @include form;
+    border: 1px solid rgba(255, 255, 255, 0.231);
+    font-size: $font-p;
+    background-color: $background;
+    width: 15rem;
+    height: 2rem;
+    &.active {
+      border: 1px solid rgb(255, 73, 73);
+    }
+  }
+  textarea {
+    @include form;
+    border: 1px solid rgba(255, 255, 255, 0.231);
+    background-color: $background;
+    resize: none;
+    height: 9rem;
+    padding: 1rem;
+    &.active {
+      border: 1px solid rgb(255, 73, 73);
+    }
+  }
+  .shop-invention-text {
+    line-height: 1rem;
+    margin: 0;
+    font-size: 1rem;
+    a {
+      color: rgb(213, 78, 78);
+      font-size: 1.8rem;
+    }
+  }
+
+  button {
+    margin: 1rem 0;
+    padding: 1rem 4.9rem;
+    @include button;
+    background-color: $color-blue;
+    &:hover {
+      background-color: rgb(22, 70, 158);
+    }
+  }
+}

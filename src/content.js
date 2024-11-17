@@ -378,3 +378,90 @@ export function shopParameters(shopParams) {
     { title: "Dimensions", desc: shopParams.dimensions },
   ];
 }
+export function inventObj(newItems) {
+  return [
+    [
+      {
+        field: newItems.creator,
+        title: "your name",
+        name: "creator",
+      },
+
+      {
+        field: newItems.name,
+        title: "Invention name",
+        name: "name",
+      },
+
+      {
+        field: newItems.uses,
+        title: "Uses form",
+        name: "uses",
+      },
+
+      {
+        field: newItems.price,
+        title: "Price ( $ )",
+        name: "price",
+      },
+
+      {
+        field: newItems.weight,
+        title: "Weight ( kg )",
+        name: "weight",
+      },
+
+      {
+        field: newItems.description,
+        title: "Description",
+        name: "description",
+      },
+    ],
+    [
+      {
+        field: newItems.dimensions,
+        title: "Dimensions ( CM x CM x CM )",
+        name: "dimensions",
+      },
+      {
+        field: newItems.power_source,
+        title: "Power Source",
+        name: "power_source",
+      },
+      {
+        field: newItems.material,
+        title: "Material",
+        name: "material",
+      },
+      {
+        field: newItems.status,
+        title: "Amount",
+        name: "status",
+      },
+      {
+        field: newItems.category,
+        title: "Category",
+        name: "category",
+      },
+      {
+        field: newItems.target_audience,
+        title: "Target Audience",
+        name: "target_audience",
+      },
+    ],
+  ];
+}
+export const newInvention = {
+  name: "",
+  description: "",
+  uses: "",
+  creator: "",
+  price: "",
+  weight: "",
+  dimensions: "",
+  power_source: "",
+  material: "",
+  status: "",
+  category: "",
+  target_audience: "",
+};

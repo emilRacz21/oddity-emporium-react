@@ -31,10 +31,13 @@ export default function ShopItem({
             </section>
             <section className="item-section-2">
               <div>
-                <h2>{item.price}</h2>
+                <h2>
+                  <a className="item-dolar">$</a>
+                  {item.price}
+                </h2>
                 <span>
                   <a>Weight:</a>
-                  <p>{item.weight}</p>
+                  <p>{item.weight} kg</p>
                 </span>
                 <span>
                   <a>Status:</a>

@@ -3,11 +3,10 @@
 .show-modal {
   position: fixed;
   transition: 0.3s ease;
-  z-index: 100;
+  z-index: 80;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10000;
   width: 50rem;
   background-color: $main-color;
   border: none;
@@ -20,13 +19,13 @@
     animation: active 0.5s forwards;
     opacity: 0;
     visibility: visible;
-    z-index: 100;
+    z-index: 90;
   }
   &.disabled {
     animation: disabled 0.5s backwards;
     opacity: 0;
     visibility: hidden;
-    z-index: 100;
+    z-index: 90;
   }
 }
 
@@ -45,7 +44,7 @@
   }
   100% {
     opacity: 0;
-    top: 5vw;
+    top: 0;
   }
 }
 
@@ -73,63 +72,5 @@
   &:hover {
     transform: scale(1.3);
     color: $color-blue;
-  }
-}
-.shop-invention-add-form {
-  margin: 0;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr 0.4fr 1fr;
-  div {
-    display: flex;
-    flex-direction: column;
-  }
-  hr {
-    width: 1px;
-    height: 99%;
-    background-color: rgba(255, 255, 255, 0.303);
-    border: none;
-  }
-  label {
-    margin-left: 0.2rem;
-    margin-top: 0.5rem;
-    font-size: $font-p;
-  }
-  input {
-    @include form;
-    border: 1px solid rgba(255, 255, 255, 0.231);
-    font-size: $font-p;
-    background-color: $background;
-    width: 15rem;
-    height: 2rem;
-  }
-  textarea {
-    @include form;
-    border: 1px solid rgba(255, 255, 255, 0.231);
-    background-color: $background;
-    resize: none;
-    height: 9rem;
-    padding: 1rem;
-  }
-  .shop-invention-text {
-    line-height: 1rem;
-    margin: 0;
-    font-size: 1rem;
-    a {
-      color: rgb(213, 78, 78);
-      font-size: 1.8rem;
-    }
-  }
-
-  button {
-    margin: 1rem 0;
-    padding: 1rem 4.9rem;
-    @include button;
-    background-color: $color-blue;
-    &:hover {
-      background-color: rgb(22, 70, 158);
-    }
   }
 }

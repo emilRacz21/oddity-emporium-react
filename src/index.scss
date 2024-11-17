@@ -110,16 +110,20 @@ $color-gold: rgb(231, 238, 19);
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: $background;
-
-  &.disabled {
-    backdrop-filter: none;
-  }
+  --blur-intensity: 1.6rem;
 }
-.root-active {
-  animation: blur-in 0.5s;
-  overflow: hidden;
-  filter: blur(1.6rem);
-  pointer-events: none;
+.root {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  pointer-events: all;
+  filter: blur(0rem);
+  &.active {
+    animation-name: blur-in;
+    pointer-events: none;
+  }
+  &.disabled {
+    animation-name: blur-out;
+  }
 }
 
 @keyframes blur-in {
@@ -127,10 +131,18 @@ $color-gold: rgb(231, 238, 19);
     filter: blur(0rem);
   }
   100% {
-    filter: blur(1.6rem);
+    filter: blur(var(--blur-intensity));
   }
 }
 
+@keyframes blur-out {
+  0% {
+    filter: blur(var(--blur-intensity));
+  }
+  100% {
+    filter: blur(0rem);
+  }
+}
 @keyframes slowGif {
   0% {
     background-position: 0 0;
