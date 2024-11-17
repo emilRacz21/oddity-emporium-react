@@ -53,6 +53,7 @@ hr {
   }
 }
 .shop-review-container {
+  animation: fade-in 1s;
   margin: 0rem 4rem;
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.071);
   .comment {
