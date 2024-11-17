@@ -1,6 +1,6 @@
 import axios from "axios";
-//import { useEffect } from "react";
-const url = "https://atlantic-noisy-xylophone.glitch.me/inventions";
+
+const url = import.meta.env.VITE_SHOP_API;
 
 //GET - get all items from API
 export default async function fetchShopData(setData, setResponseText) {
