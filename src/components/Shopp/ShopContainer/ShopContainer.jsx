@@ -21,17 +21,18 @@ export default function ShopContainer() {
   const [errorMessage, setErrorMessage] = useState("");
 
   function handleChangeInvention(event) {
-    setNewItems((prev) => {
-      return { ...prev, [event.target.name]: event.target.value };
-    });
+    const { name, value, files } = event.target;
+    if (name === "image" && files.length > 0) {
+      setNewItems((prev) => ({ ...prev, image: files[0] }));
+    } else {
+      setNewItems((prev) => ({ ...prev, [name]: value }));
+    }
   }
 
   function addNewInvention(event) {
     event.preventDefault();
     handleAddInvention(newItems, setData, setErrorMessage);
-
     setTimeout(() => setErrorMessage(""), 5000);
-
     if (!Object.values(newItems).includes("") && errorMessage === "") {
       setAddItem(false);
       setNewItems(newInvention);

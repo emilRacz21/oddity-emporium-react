@@ -65,8 +65,27 @@ export default function ShopAddInvention({
           );
         })}
         <span>
+          <div className="file-input-wrapper">
+            <input
+              id="fileInput"
+              type="file"
+              accept="image/*"
+              name="image"
+              onChange={handleChangeInvention}
+            />
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("fileInput").click();
+              }}
+              className="custom-file-button"
+            >
+              Select image
+            </button>
+          </div>
           <button onClick={addNewInvention}>Add invention</button>
         </span>
+
         <p className="shop-invention-text">
           <a>*</a>
           If you add your invention, it will appear at the bottom of the page!
