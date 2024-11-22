@@ -4,12 +4,13 @@ import { header } from "../../content";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState, useRef, useEffect } from "react";
 import { ThemeContext } from "../../store/theme-context";
-
+import { LoginContext } from "../../store/login-context";
 export default function Header() {
   // React states
   let navigate = useNavigate();
   const animateRef = useRef(false);
   const { activeIndex, setActiveIndex } = useContext(ThemeContext);
+  const { isLogged } = useContext(LoginContext);
   const [showElement, setShowElement] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -43,33 +44,45 @@ export default function Header() {
         />
         <div className="header-nav">
           <nav>
-            {["Getting started", "Shop", "Contact", "About us", "Login"].map(
-              (label, index) => {
-                return (
-                  <Link
-                    onMouseEnter={
-                      index === 1
-                        ? () => {
-                            setIsVisible(true);
-                            setShowElement(true);
-                          }
-                        : null
-                    }
-                    key={index}
-                    className={`header-link ${
-                      activeIndex === index ? "active" : ""
-                    }`}
-                    onClick={() => {
-                      setShowElement(false);
-                      setActiveIndex(index);
-                    }}
-                    to={["/", "/shop", "/contact", "/about", "/login"][index]}
-                  >
-                    {label}
-                  </Link>
-                );
-              }
-            )}
+            {[
+              "Getting started",
+              "Shop",
+              "Contact",
+              "About us",
+              `${isLogged ? "Account" : "Login"}`,
+            ].map((label, index) => {
+              return (
+                <Link
+                  onMouseEnter={
+                    index === 1
+                      ? () => {
+                          setIsVisible(true);
+                          setShowElement(true);
+                        }
+                      : null
+                  }
+                  key={index}
+                  className={`header-link ${
+                    activeIndex === index ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    setShowElement(false);
+                    setActiveIndex(index);
+                  }}
+                  to={
+                    [
+                      "/",
+                      "/shop",
+                      "/contact",
+                      "/about",
+                      `${isLogged ? "/account" : "/login"}`,
+                    ][index]
+                  }
+                >
+                  {label}
+                </Link>
+              );
+            })}
           </nav>
           {isVisible && (
             <section

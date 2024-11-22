@@ -362,6 +362,7 @@ export const login = {
     type: "password",
   },
   desc: "*All labels are requrired",
+  descA: "*login or password is incorrect!",
   button: "Log in",
 };
 

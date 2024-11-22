@@ -1,14 +1,14 @@
 import "./ShopContainer.scss";
 import Navbar from "../../Navbar/Navbar";
 import fetchShopData from "../../Api_/ShopApi";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import LoadingAnimation from "../../LoadingAnimation/LoadingAnimation";
 import ShopItem from "../ShopItem/ShopItem";
 import ShowModal from "../../ShowModal/ShowModal";
 import { handleAddInvention } from "../../Api_/ShopApi";
 import ShopAddInvention from "../ShopAddInvention/ShopAddInvention";
 import { newInvention } from "../../../content";
-
+import { LoginContext } from "../../../store/login-context";
 export default function ShopContainer() {
   const [data, setData] = useState([]);
   const [stars, setStars] = useState([]);
@@ -19,6 +19,7 @@ export default function ShopContainer() {
   const [addItem, setAddItem] = useState(false);
   const [newItems, setNewItems] = useState(newInvention);
   const [errorMessage, setErrorMessage] = useState("");
+  const { isLogged } = useContext(LoginContext);
 
   function handleChangeInvention(event) {
     const { name, value, files } = event.target;
@@ -116,8 +117,12 @@ export default function ShopContainer() {
           ))}
         </select>
         <button
-          onClick={() => setAddItem(true)}
-          className="shop-invention-button-add"
+          onClick={() =>
+            isLogged ? setAddItem(true) : alert("Log in to add items!")
+          }
+          className={`shop-invention-button-add ${
+            isLogged ? `active` : `disabled`
+          }`}
         >
           Add +
         </button>

@@ -30,9 +30,17 @@
     margin: 0 2rem;
     padding: 0.4rem 3rem;
     font-size: 1.3rem;
-    background-color: $color-blue;
-    &:hover {
-      background-color: rgb(22, 70, 158);
+
+    &.active {
+      background-color: $color-blue;
+
+      &:hover {
+        background-color: rgb(22, 70, 158);
+      }
+    }
+    &.disabled {
+      background-color: rgb(78, 79, 80);
+      cursor: default;
     }
   }
 }

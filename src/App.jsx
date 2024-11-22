@@ -10,31 +10,36 @@ import ShopContainer from "./components/Shopp/ShopContainer/ShopContainer";
 import Login from "./components/Login/Login";
 import ThemeProvider from "../src/store/theme-context";
 import FormProvider from "./store/form-context";
+import LoginProvider from "./store/login-context";
+import Account from "./components/Account/Account";
 
 function App() {
   return (
     <ThemeProvider>
       <FormProvider>
-        <Router>
-          <Header />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Author />
-                  <Collection />
-                  <WhyOddity />
-                </>
-              }
-            />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/shop" element={<ShopContainer />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
-          <Footer />
-        </Router>
+        <LoginProvider>
+          <Router>
+            <Header />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <Author />
+                    <Collection />
+                    <WhyOddity />
+                  </>
+                }
+              />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/shop" element={<ShopContainer />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/account" element={<Account />} />
+            </Routes>
+            <Footer />
+          </Router>
+        </LoginProvider>
       </FormProvider>
     </ThemeProvider>
   );

@@ -48,6 +48,29 @@ export function postReviewInvention(data, id, setData) {
 }
 
 //DELETE - delete an existion item from API
-export function deleteInvention() {
-  axios.delete(`${url}/672e072e51729832868be5a2`);
+export function deleteInvention(setData, id) {
+  axios
+    .delete(`${url}/${id}`)
+    .then(() => fetchShopData(setData, () => {}))
+    .catch((error) => console.log(error));
+}
+
+//PUT - update existing invention
+export function updateExistingInvention(
+  setData,
+  id,
+  setErrorMessage,
+  newItems
+) {
+  const formData = new FormData();
+  Object.keys(newItems).forEach((key) => {
+    if (newItems[key]) {
+      formData.append(key, newItems[key]);
+    }
+  });
+
+  return axios
+    .put(`${url}/${id}`, formData)
+    .then(() => fetchShopData(setData, () => {}))
+    .catch((error) => setErrorMessage(`Try again later (${error.name})`));
 }

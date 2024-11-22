@@ -1,0 +1,53 @@
+@use "../../index.scss" as *;
+.shop-items {
+  margin: 0;
+
+  .item-section-1 {
+    p {
+      text-align: justify;
+    }
+  }
+}
+.account-btn {
+  @include button;
+  padding: 0.8rem 2.5rem;
+  margin: 0 1rem;
+
+  &.update {
+    background-color: green;
+
+    &:hover {
+      background-color: rgb(24, 92, 24);
+    }
+  }
+
+  &.delete {
+    background-color: red;
+    &:hover {
+      background-color: rgb(173, 22, 22);
+    }
+  }
+}
+.dialog-content {
+  padding-bottom: 3rem;
+}
+.delete-btns {
+  display: flex;
+  justify-content: center;
+}
+.account-empty {
+  animation: fade-in 1s;
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 5rem;
+    padding: 0.7rem;
+  }
+}
+.delete-text {
+  color: $color-blue;
+}

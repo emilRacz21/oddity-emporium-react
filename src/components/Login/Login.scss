@@ -15,6 +15,7 @@
     height: 12rem;
   }
 }
+
 .login-img {
   margin: 2rem;
   box-shadow: -10px -10px 1px rgb(1, 12, 18) inset;
@@ -26,6 +27,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  .red-login {
+    color: rgb(229, 39, 39);
+  }
   p {
     color: white;
     margin: 0;
