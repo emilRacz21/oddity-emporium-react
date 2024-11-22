@@ -28,7 +28,7 @@ export default function Login() {
       setPasswd(loginObj);
       setIsLogged(true);
       setLoginText(true);
-      navigate("/account"); // Przejdź na stronę /account
+      navigate("/account");
     } else {
       setLoginText(false);
       setTimeout(() => {
