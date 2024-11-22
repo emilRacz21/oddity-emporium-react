@@ -37,7 +37,8 @@
     font-size: $font-footer;
     color: $color-blue;
   }
-  p {
+  p,
+  a {
     @include links;
   }
 
@@ -85,6 +86,14 @@
   justify-content: center;
   p {
     margin: 0;
+  }
+  a {
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: $color-blue;
+    }
   }
 }
 .footer-contact-media {

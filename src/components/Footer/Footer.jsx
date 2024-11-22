@@ -2,10 +2,12 @@ import "./Footer.scss";
 import { footer } from "../../content";
 import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
+import { LoginContext } from "../../store/login-context";
 import ShowModal from "../ShowModal/ShowModal";
 import { dialogContents } from "../../content";
 import { ThemeContext } from "../../store/theme-context";
 export default function Footer() {
+  const { isLogged } = useContext(LoginContext);
   const { setActiveIndex } = useContext(ThemeContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [dialogContent, setDialogContent] = useState({
@@ -33,18 +35,26 @@ export default function Footer() {
               <img src={footer.logo} alt={footer.logoAlt} />
               <h4>{footer.titleAlt}</h4>
             </div>
-            <p style={{ margin: "1rem 0" }}>{footer.description}</p>
+            <p
+              style={{
+                margin: "1rem 0",
+                cursor: "default",
+                color: "white",
+              }}
+            >
+              {footer.description}
+            </p>
             <div className="footer-btn-grid">
               <Link
                 className="footer-btn"
                 to={"/login"}
                 onClick={() => setActiveIndex(4)}
               >
-                {footer.button}
+                {isLogged ? "Account" : footer.button}
               </Link>
               <Link
                 className="footer-btn-no-border"
-                to={"/about"}
+                to={isLogged ? "/account" : "/about"}
                 onClick={() => setActiveIndex(3)}
               >
                 {footer.buttona}
@@ -69,7 +79,11 @@ export default function Footer() {
           <div className="footer-grid-1">
             <h4>{footer.shopTitle}</h4>
             {footer.shop.map((items, index) => {
-              return <p key={index}>{items}</p>;
+              return (
+                <Link to={items.href} key={index}>
+                  {items.name}
+                </Link>
+              );
             })}
           </div>
 
@@ -84,7 +98,11 @@ export default function Footer() {
             </Link>
             <div className="footer-contact-media">
               {footer.images.map((items, index) => {
-                return <img key={index} src={items.img} alt={items.alt} />;
+                return (
+                  <a key={index} href={items.href}>
+                    <img src={items.img} alt={items.alt} />
+                  </a>
+                );
               })}
             </div>
           </div>
@@ -92,7 +110,9 @@ export default function Footer() {
       </section>
       <section className="footer-author">
         <p>{footer.footerAuthor}</p>
-        <p>{footer.footerCreated}</p>
+        <a href="https://portfolio-emilr.netlify.app/">
+          <p>{footer.footerCreated}</p>
+        </a>
       </section>
     </>
   );
