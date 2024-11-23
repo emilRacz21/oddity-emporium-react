@@ -81,6 +81,7 @@ export default function Header() {
                   onClick={() => {
                     setShowElement(false);
                     setActiveIndex(index);
+                    setMenu(false);
                   }}
                   to={
                     [
