@@ -15,6 +15,7 @@ export default function Header() {
   const [showElement, setShowElement] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const { value } = useContext(BasketContext);
+  const [menu, setMenu] = useState(false);
 
   //useEffect for hide and show animation for shop
   useEffect(() => {
@@ -44,7 +45,17 @@ export default function Header() {
             navigate("/");
           }}
         />
-        <div className="header-nav">
+        <div
+          onClick={() => {
+            setMenu((value) => !value);
+          }}
+          className="mobile-burger"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className={`header-nav ${menu ? "active" : "disabled"}`}>
           <nav>
             {[
               "Getting started",

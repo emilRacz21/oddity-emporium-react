@@ -111,3 +111,26 @@
 .footer-conc {
   @include links;
 }
+@media (max-width: 900px) {
+  .footer-section {
+    width: 100%;
+    .footer-container {
+      display: flex;
+      margin: 2rem;
+
+      margin-bottom: 1rem;
+      flex-direction: column;
+      .footer-grid-1 {
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+      }
+    }
+  }
+  .footer-author {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+}

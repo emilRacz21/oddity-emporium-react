@@ -76,3 +76,14 @@
     text-align: start;
   }
 }
+@media (max-width: 900px) {
+  .oddity-section {
+    border-bottom: $main-border;
+    .oddity-container {
+      width: 100%;
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0rem;
+    }
+  }
+}

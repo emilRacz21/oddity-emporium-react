@@ -110,3 +110,29 @@
     transform: translateY(0%);
   }
 }
+
+@media (max-width: 900px) {
+  .author-section {
+    width: 100%;
+
+    .author-article {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 1rem;
+      height: max-content;
+      .author-title {
+        margin-top: 2rem;
+        h1 {
+          font-size: 4.3rem;
+          margin: 0 1rem;
+        }
+      }
+      .author-desc {
+        p {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
