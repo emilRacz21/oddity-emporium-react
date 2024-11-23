@@ -17,7 +17,7 @@ export default function Login() {
   });
   const { setIsLogged } = useContext(LoginContext);
   const [loginText, setLoginText] = useState(true);
-  const navigate = useNavigate(); // Hook nawigacji
+  const navigate = useNavigate();
 
   function handleLoginAccount() {
     const yourLog = import.meta.env.VITE_USERNAME;

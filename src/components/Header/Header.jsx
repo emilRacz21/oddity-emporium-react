@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState, useRef, useEffect } from "react";
 import { ThemeContext } from "../../store/theme-context";
 import { LoginContext } from "../../store/login-context";
+import { BasketContext } from "../../store/basket-context";
 export default function Header() {
   // React states
   let navigate = useNavigate();
@@ -13,6 +14,7 @@ export default function Header() {
   const { isLogged } = useContext(LoginContext);
   const [showElement, setShowElement] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const { value } = useContext(BasketContext);
 
   //useEffect for hide and show animation for shop
   useEffect(() => {
@@ -93,11 +95,15 @@ export default function Header() {
               <div>
                 <span className="basket-section">
                   <p>
-                    0.00 <a>$</a>
+                    {value.value.toFixed(2)} <a>$</a>
                   </p>
                 </span>
                 <span className="basket-details">
-                  <h3>Your basket is empty!</h3>
+                  <h3>
+                    {value.items == 0
+                      ? "Your basket is empty!"
+                      : `You added ${value.items} items to basket.`}
+                  </h3>
                   <p>
                     Add items to your cart and buy them quickly and
                     conveniently.

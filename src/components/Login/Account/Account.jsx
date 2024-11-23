@@ -1,14 +1,14 @@
-import Navbar from "../Navbar/Navbar";
-import fetchShopData from "../Api_/ShopApi";
+import Navbar from "../../Navbar/Navbar";
+import fetchShopData from "../../Api_/ShopApi";
 import { useEffect, useState } from "react";
-import LoadingAnimation from "../LoadingAnimation/LoadingAnimation";
-import ShowModal from "../ShowModal/ShowModal";
-import { deleteInvention } from "../Api_/ShopApi";
-import add from "../../assets/svg/add.svg";
+import LoadingAnimation from "../../LoadingAnimation/LoadingAnimation";
+import ShowModal from "../../ShowModal/ShowModal";
+import { deleteInvention } from "../../Api_/ShopApi";
+import add from "../../../assets/svg/add.svg";
 import "./Account.scss";
-import ShopAddInvention from "../Shopp/ShopAddInvention/ShopAddInvention";
-import { newInvention } from "../../content";
-import { updateExistingInvention } from "../Api_/ShopApi";
+import ShopAddInvention from "../../Shopp/ShopAddInvention/ShopAddInvention";
+import { newInvention } from "../../../content";
+import { updateExistingInvention } from "../../Api_/ShopApi";
 export default function Account() {
   const [data, setData] = useState();
   const [isModalOpen, setIsModalOpen] = useState(false);

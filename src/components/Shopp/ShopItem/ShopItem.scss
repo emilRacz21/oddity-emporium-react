@@ -74,18 +74,25 @@
     cursor: pointer;
     color: white;
   }
+  .shop-button-buy {
+    &.active {
+      background-color: rgb(32, 132, 25);
+      &:hover {
+        background-color: rgb(27, 107, 22);
+      }
+    }
 
+    &.disabled {
+      background-color: rgb(78, 79, 80);
+      cursor: default;
+    }
+  }
   button {
     @include button;
     padding: 0.5rem 2rem;
     margin: 0 1rem;
     background-color: $color-blue;
-    &:nth-child(1) {
-      background-color: rgb(127, 132, 25);
-      &:hover {
-        background-color: rgb(161, 167, 50);
-      }
-    }
+
     &:hover {
       background-color: rgb(22, 70, 158);
     }

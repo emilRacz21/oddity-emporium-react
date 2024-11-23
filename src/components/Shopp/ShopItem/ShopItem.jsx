@@ -2,6 +2,14 @@ import ShopDetails from "../ShopDetails/ShopDetails";
 import "./ShopItem.scss";
 import DropdownMenu from "../../DropdownMenu/DropdownMenu";
 import RateStars from "../../RateStars/RateStars";
+import { useState, useContext } from "react";
+import { BasketContext } from "../../../store/basket-context";
+import ShowModal from "../../ShowModal/ShowModal";
+import { LoginContext } from "../../../store/login-context";
+import { updateExistingInvention } from "../../Api_/ShopApi";
+import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../../store/theme-context";
+
 export default function ShopItem({
   showDetails,
   selectedSectionId,
@@ -11,8 +19,23 @@ export default function ShopItem({
   stars,
   setData,
 }) {
+  const [buyContent, setBuyContent] = useState(false);
+  const { isLogged } = useContext(LoginContext);
+  const { setValue } = useContext(BasketContext);
+  const navigate = useNavigate();
+  const { setActiveIndex } = useContext(ThemeContext);
   return (
     <section className="shop-all-content">
+      <ShowModal
+        modalStatus={buyContent}
+        modalDisable={setBuyContent}
+        title={`You bought ${item.name}!`}
+      >
+        <p>
+          If you want to know more details, please visit your e-mail. We sent
+          confirmation of purchase there.
+        </p>
+      </ShowModal>
       <section className="shop-container">
         <img src={item.image} alt={item.name} />
         <section className="shop-items">
@@ -69,8 +92,52 @@ export default function ShopItem({
               ></div>
             </span>
             <span className="shop-buttons-center">
-              <button>buy now</button>
-              <button>add to basket</button>
+              <button
+                onClick={() => {
+                  if (isLogged) {
+                    if (item.status > 0) {
+                      const newStatus = item.status - 1;
+                      setBuyContent(true);
+                      setTimeout(() => {
+                        setBuyContent(false);
+                      }, 1000);
+
+                      const updatedFields = { status: newStatus };
+                      updateExistingInvention(
+                        setData,
+                        item._id,
+                        <p></p>,
+                        updatedFields
+                      );
+                    } else {
+                      alert("No more items in stock!");
+                    }
+                  } else {
+                    navigate("/login");
+                    setActiveIndex(4);
+                  }
+                }}
+                className={`shop-button-buy ${
+                  isLogged ? `active` : `disabled`
+                }`}
+              >
+                buy now
+              </button>
+
+              <button
+                onClick={() => {
+                  setValue((prev) => {
+                    const currentItems = prev.items;
+                    const newItems = currentItems + 1;
+                    const currentValue = prev.value || 0;
+                    const newValue = currentValue + item.price;
+                    alert(`Added ${newItems} items to your basket`);
+                    return { ...prev, items: newItems, value: newValue };
+                  });
+                }}
+              >
+                add to basket
+              </button>
             </span>
           </nav>
         </section>

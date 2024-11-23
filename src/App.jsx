@@ -11,37 +11,40 @@ import Login from "./components/Login/Login";
 import ThemeProvider from "../src/store/theme-context";
 import FormProvider from "./store/form-context";
 import LoginProvider from "./store/login-context";
-import Account from "./components/Account/Account";
+import Account from "./components/Login/Account/Account";
+import BasketProvider from "./store/basket-context";
 
 function App() {
   return (
-    <ThemeProvider>
-      <FormProvider>
-        <LoginProvider>
-          <Router>
-            <Header />
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <Author />
-                    <Collection />
-                    <WhyOddity />
-                  </>
-                }
-              />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/shop" element={<ShopContainer />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/account" element={<Account />} />
-            </Routes>
-            <Footer />
-          </Router>
-        </LoginProvider>
-      </FormProvider>
-    </ThemeProvider>
+    <BasketProvider>
+      <ThemeProvider>
+        <FormProvider>
+          <LoginProvider>
+            <Router>
+              <Header />
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <>
+                      <Author />
+                      <Collection />
+                      <WhyOddity />
+                    </>
+                  }
+                />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/shop" element={<ShopContainer />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/account" element={<Account />} />
+              </Routes>
+              <Footer />
+            </Router>
+          </LoginProvider>
+        </FormProvider>
+      </ThemeProvider>
+    </BasketProvider>
   );
 }
 

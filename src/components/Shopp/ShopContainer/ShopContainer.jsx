@@ -2,6 +2,8 @@ import "./ShopContainer.scss";
 import Navbar from "../../Navbar/Navbar";
 import fetchShopData from "../../Api_/ShopApi";
 import { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../../store/theme-context";
 import LoadingAnimation from "../../LoadingAnimation/LoadingAnimation";
 import ShopItem from "../ShopItem/ShopItem";
 import ShowModal from "../../ShowModal/ShowModal";
@@ -20,7 +22,8 @@ export default function ShopContainer() {
   const [newItems, setNewItems] = useState(newInvention);
   const [errorMessage, setErrorMessage] = useState("");
   const { isLogged } = useContext(LoginContext);
-
+  const navigate = useNavigate();
+  const { setActiveIndex } = useContext(ThemeContext);
   function handleChangeInvention(event) {
     const { name, value, files } = event.target;
     if (name === "image" && files.length > 0) {
@@ -117,9 +120,14 @@ export default function ShopContainer() {
           ))}
         </select>
         <button
-          onClick={() =>
-            isLogged ? setAddItem(true) : alert("Log in to add items!")
-          }
+          onClick={() => {
+            if (isLogged) {
+              setAddItem(true);
+            } else {
+              setActiveIndex(4);
+              navigate("/login");
+            }
+          }}
           className={`shop-invention-button-add ${
             isLogged ? `active` : `disabled`
           }`}
