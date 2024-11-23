@@ -78,12 +78,33 @@
 }
 @media (max-width: 900px) {
   .oddity-section {
+    width: 100%;
     border-bottom: $main-border;
     .oddity-container {
       width: 100%;
       margin: 0;
       box-shadow: none;
       border-radius: 0rem;
+      .oddity-adventages {
+        .oddity-why {
+          font-size: 2rem;
+        }
+        .oddity-item {
+          flex-direction: column;
+
+          img {
+            margin: 1rem;
+          }
+        }
+        .oddity-description {
+          margin: 0;
+          h3 {
+            text-align: center;
+            line-height: 2rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
     }
   }
 }

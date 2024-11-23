@@ -119,6 +119,9 @@ header {
 }
 
 @media (max-width: 900px) {
+  header {
+    width: 100%;
+  }
   .header-nav {
     position: absolute;
     top: 100%;
