@@ -124,13 +124,22 @@
       .author-title {
         margin-top: 2rem;
         h1 {
-          font-size: 4.3rem;
-          margin: 0 1rem;
+          font-size: 4rem;
+          margin: 0 2rem;
         }
       }
       .author-desc {
         p {
           margin-right: 0;
+        }
+        .author-btns {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          .author-button-about {
+            font-size: 1rem;
+          }
         }
       }
     }
