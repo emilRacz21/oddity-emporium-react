@@ -115,3 +115,64 @@
     height: 2.4rem;
   }
 }
+@media (max-width: 1150px) {
+  .shop-all-content {
+    .shop-container {
+      .shop-items {
+        .shop-section {
+          .item-section-1,
+          .item-section-2 {
+            margin: 1rem 0; // Dostosowanie marginesów dla elementów
+            justify-content: center; // Wyrównanie do środka
+            text-align: center; // Wyśrodkowanie tekstu w sekcji
+
+            h2 {
+              font-size: 2rem;
+              line-height: 2rem;
+              margin: 1rem 0;
+            }
+            .item-dolar {
+              font-size: 2rem;
+            }
+            span {
+              p {
+                text-align: center;
+              }
+            }
+            div {
+              .shop-rate-stars {
+                div {
+                  display: flex;
+                  flex-direction: row;
+
+                  img {
+                    width: 4rem;
+                    height: 4rem;
+                  }
+                }
+                a {
+                  margin-top: 1rem;
+                }
+              }
+            }
+            .shop-rate-stars {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+        .shop-buttons {
+          display: flex;
+          flex-direction: column;
+          .shop-buttons-center {
+            padding: 0;
+            justify-content: center;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
