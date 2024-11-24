@@ -86,5 +86,9 @@ The backend is connected to MongoDB via Mongoose, and you'll need a MongoDB Atla
 3. Get the Connection String: From your cluster's dashboard, click on "Connect" and select "Connect your application". Copy the connection string.
 4. Update .env file: Replace the <username>, <password>, and <dbname> in the connection string with your actual MongoDB credentials and database name.
 
+## Design
+
+![shop](https://github.com/user-attachments/assets/6f469a53-4a81-4cb0-b093-2470326a67b2)
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
