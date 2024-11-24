@@ -30,41 +30,43 @@ export default function Contact() {
         </div>
         <section>
           <h2 className="contact-p">Send a message:</h2>
-          <form className="contact-form" onSubmit={handleSubmit}>
-            {contactForm.map((items, index) => (
-              <span className="contact-form" key={index}>
-                <label>{items.title}</label>
-                <input
-                  value={inputs[index]}
-                  onChange={(e) => {
-                    setInputs((prev) => {
-                      return { ...prev, [index]: e.target.value };
-                    });
-                  }}
-                  type={items.type}
-                  name={items.name}
-                  required
-                />
-              </span>
-            ))}
-            <label>Input your message below</label>
-            <textarea
-              name="Message"
-              value={inputs[3]}
-              onChange={(e) => {
-                setInputs((prev) => {
-                  return { ...prev, [3]: e.target.value };
-                });
-              }}
-              required
-            ></textarea>
-            <nav className="contact-center">
-              {message}
-              <button type="submit" className="contact-btn">
-                send now
-              </button>
-            </nav>
-          </form>
+          <span className="mobile-form">
+            <form className="contact-form" onSubmit={handleSubmit}>
+              {contactForm.map((items, index) => (
+                <span className="contact-form" key={index}>
+                  <label>{items.title}</label>
+                  <input
+                    value={inputs[index]}
+                    onChange={(e) => {
+                      setInputs((prev) => {
+                        return { ...prev, [index]: e.target.value };
+                      });
+                    }}
+                    type={items.type}
+                    name={items.name}
+                    required
+                  />
+                </span>
+              ))}
+              <label className="contact-l">Input your message below</label>
+              <textarea
+                name="Message"
+                value={inputs[3]}
+                onChange={(e) => {
+                  setInputs((prev) => {
+                    return { ...prev, [3]: e.target.value };
+                  });
+                }}
+                required
+              ></textarea>
+              <nav className="contact-center">
+                {message}
+                <button type="submit" className="contact-btn">
+                  send now
+                </button>
+              </nav>
+            </form>
+          </span>
         </section>
       </article>
     </Navbar>

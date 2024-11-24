@@ -44,3 +44,24 @@
     }
   }
 }
+@media (max-width: 1150px) {
+  .shop-searchbox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    input {
+      width: 95%;
+
+      border-radius: 1rem;
+    }
+
+    select {
+      border-radius: 1rem;
+      margin: 2rem 0;
+      height: 3rem;
+      width: 95%;
+    }
+  }
+}

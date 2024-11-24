@@ -67,3 +67,37 @@
     }
   }
 }
+@media (max-width: 1150px) {
+  .login-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    box-shadow: none;
+    .login-img {
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    .login-section {
+      margin-bottom: 2rem;
+
+      h2 {
+        line-height: 2rem;
+
+        text-align: center;
+      }
+      form {
+        width: 100%;
+
+        input {
+          width: 90%;
+        }
+      }
+    }
+    .login-section {
+      width: 90%;
+    }
+  }
+}

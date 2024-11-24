@@ -127,3 +127,25 @@
   height: 87rem;
   border-left: 1px solid #ffffff;
 }
+@media (max-width: 1150px) {
+  .containter {
+    width: 100%;
+  }
+  .about-about {
+    width: 50%;
+    .container-h2 {
+      width: 80%;
+      text-align: center;
+    }
+    .container-p {
+      width: 80%;
+    }
+  }
+  .about-grid {
+    width: 50%;
+  }
+  .slick-slider {
+    width: 50%;
+    margin: 0;
+  }
+}

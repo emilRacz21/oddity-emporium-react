@@ -74,3 +74,62 @@
     height: 4rem;
   }
 }
+@media (max-width: 1150px) {
+  .contact-p {
+    text-align: center;
+  }
+  .contact-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .contact-grid {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      align-items: center;
+
+      span {
+        p {
+          text-align: center;
+          margin: 2rem;
+          margin-bottom: 0;
+        }
+        .contact-information {
+          flex-direction: column;
+          img {
+            width: 6rem;
+            height: 6rem;
+          }
+          p {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  .mobile-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .contact-form {
+      width: 90%;
+      justify-content: center;
+      align-items: center;
+
+      textarea,
+      .contact-center,
+      .contact-l {
+        width: 90%;
+        padding: 0;
+      }
+
+      input,
+      label {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+}
