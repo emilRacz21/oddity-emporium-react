@@ -91,3 +91,33 @@
     }
   }
 }
+@media (max-width: 1150px) {
+  .shop-invention-add-form {
+    display: flex;
+    height: 40rem;
+    width: auto;
+    flex-direction: column;
+    overflow: auto;
+
+    div {
+      justify-content: center;
+      align-items: center;
+
+      textarea {
+        width: 15rem;
+      }
+
+      span {
+        .file-input-wrapper {
+          width: 100%;
+          .custom-file-button {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .shop-invention-text {
+      width: 90%;
+    }
+  }
+}

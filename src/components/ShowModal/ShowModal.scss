@@ -74,3 +74,29 @@
     color: $color-blue;
   }
 }
+@media (max-width: 1150px) {
+  .show-modal {
+    width: 70%;
+    padding: 2rem;
+    .dialog-nav {
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        font-size: 1.7rem;
+        line-height: 2rem;
+      }
+      .modal-x {
+        margin-left: 2rem;
+      }
+    }
+    .dialog-content {
+      padding: 0;
+      p {
+        margin-top: 0;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
