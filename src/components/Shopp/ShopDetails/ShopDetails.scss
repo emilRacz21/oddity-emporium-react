@@ -178,9 +178,10 @@ hr {
     }
   }
   .details-flex {
-    width: 95%;
+    width: 100%;
 
     .details-row {
+      margin: 0 1rem;
       p {
         margin-left: 5rem;
         font-size: 1rem;
