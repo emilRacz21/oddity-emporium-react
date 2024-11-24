@@ -20,7 +20,7 @@ export default function About() {
   };
   return (
     <Navbar title={["Getting started", "About"]}>
-      <section className="container">
+      <section className="containerss">
         <article className="about-about">
           <h2 className="container-h2">{aboutContent.title}</h2>
           <p className="container-p">{aboutContent.content}</p>

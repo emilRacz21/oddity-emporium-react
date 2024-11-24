@@ -6,7 +6,7 @@
   margin: 1rem;
   padding: 2rem;
 }
-.container {
+.containerss {
   animation: fade-inn 1s;
   width: 80rem;
   flex-direction: column;
@@ -128,24 +128,49 @@
   border-left: 1px solid #ffffff;
 }
 @media (max-width: 1150px) {
-  .containter {
+  .containerss {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .about-about {
-    width: 50%;
+    width: 100%;
+
+    img {
+      transform: scale(70%);
+    }
+
     .container-h2 {
-      width: 80%;
       text-align: center;
+      line-height: 2rem;
+      margin-bottom: 2rem;
     }
     .container-p {
-      width: 80%;
+      text-align: justify;
+      margin: 0 2rem;
+      font-size: 1.4rem;
     }
   }
+
   .about-grid {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+
+    &::before {
+      display: none;
+    }
   }
-  .slick-slider {
-    width: 50%;
-    margin: 0;
+
+  //TU CYTAT
+
+  .about-slider {
+    width: 90vw;
+  }
+
+  .about-author {
+    font-size: 1.6rem;
   }
 }
