@@ -132,6 +132,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: $main-color;
+
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.11);
     padding: 1rem 0;
     z-index: 1000;
@@ -143,6 +144,9 @@ header {
   .header-nav.active {
     visibility: visible;
     opacity: 1;
+    .header-shop-details {
+      display: none;
+    }
   }
   .header-section {
     .header-logo {

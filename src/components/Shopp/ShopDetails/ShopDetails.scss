@@ -150,3 +150,47 @@ hr {
     }
   }
 }
+@media (max-width: 1150px) {
+  .shop-details {
+    margin: 1rem;
+    .shop-margin {
+      .shop-desc {
+        width: 100%;
+        .details-text {
+          margin: 0;
+          text-align: center;
+        }
+        p {
+          margin: 1rem;
+          font-size: 1.4rem;
+        }
+        .shop-buttons-center {
+          padding: 0;
+          justify-content: center;
+        }
+      }
+    }
+    .review-form {
+      margin: 0;
+      div {
+        margin: 0;
+      }
+    }
+  }
+  .details-flex {
+    width: 100%;
+
+    .details-row {
+      p {
+        margin-left: 5rem;
+        font-size: 1rem;
+        text-align: end;
+      }
+    }
+  }
+  .shop-details {
+    .shop-review-container {
+      margin: 0;
+    }
+  }
+}
